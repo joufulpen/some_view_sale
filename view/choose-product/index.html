@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>选择产品</title>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+  </style>
+  <script>
+    window.coolLocals = {}
+  </script>
+  <!-- <script src="../../cool-master/cool-master.js"></script> -->
+  <script src="/settings.js"></script>
+</head>
+
+<body>
+  <div id="root" v-cloak>
+    <cool-views :buttons="buttons" @button-click="buttonsevent" :show-query="showQuery" :origin-condition="originCondition" @get-condition-ware="getCondition" :hdr-table-data="hdrTableData" @hdr-select-change="selection"></cool-views>
+    <!-- <el-container ref="container">
+      <el-header height="auto">
+        <button-group :buttons="buttons" @button-click="buttonsevent"></button-group>
+      </el-header>
+      <el-main>
+        <el-container>
+
+          <test-query :origin-condition="originCondition" @get-condition="getCondition">
+          </test-query>
+
+          <cool-table v-loading="tableLoading" :page="true" border="border" :data="productData" :columns="productColumns" :total="total" :layout="layout" :current-page.sync="condition.current" :page-size.sync="condition.offset" :cell-style="cellRow"
+            @pagination-size-change="paginationSizeChange" @pagination-current-change="paginationCurrentChange" @table-selection-change="selection"></cool-table>
+        </el-container>
+      </el-main>
+    </el-container> -->
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+{
+  "originCondition": {
+    "formno": {
+      "value": "",
+      "mode": "不参与",
+      "name": "项目名称",
+      "dataType": "string",
+      "fieldName": "formno",
+      "tableRelationMode": "AND",
+      "form": "input"
+    },
+    "pFormno": {
+      "value": "",
+      "mode": "不参与",
+      "name": "工程代号",
+      "dataType": "string",
+      "fieldName": "pFormno",
+      "tableRelationMode": "AND",
+      "form": "input"
+    },
+    "customerName": {
+      "value": "",
+      "mode": "不参与",
+      "name": "客户订单编号",
+      "dataType": "string",
+      "fieldName": "customerName",
+      "tableRelationMode": "AND",
+      "form": "input"
+    },
+    "region": {
+      "value": "",
+      "mode": "不参与",
+      "name": "内部订单编号",
+      "dataType": "string",
+      "fieldName": "region",
+      "tableRelationMode": "AND",
+      "form": "input"
+    },
+    "status": {
+      "value": "",
+      "mode": "不参与",
+      "name": "订单状态",
+      "dataType": "string",
+      "fieldName": "status",
+      "tableRelationMode": "AND",
+      "form": "select",
+      "options": []
+    },
+    "salesman": {
+      "value": "",
+      "mode": "不参与",
+      "name": "客户名称",
+      "dataType": "string",
+      "fieldName": "salesman",
+      "tableRelationMode": "AND",
+      "form": "input"
+    },
+    "deliveryDate": {
+      "value": ["", ""],
+      "mode": "之间",
+      "name": "创建日期",
+      "dataType": "date",
+      "fieldName": "deliveryDate",
+      "tableRelationMode": "AND",
+      "form": "date"
+    },
+    "createDate": {
+      "value": ["", ""],
+      "mode": "之间",
+      "name": "预计发货日期",
+      "dataType": "date",
+      "fieldName": "createDate",
+      "tableRelationMode": "AND",
+      "form": "date"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8" />
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <title>发货单维护</title>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+  </style>
+  <script>
+    window.coolLocals = {}
+  </script>
+  <script src="/settings.js"></script>
+</head>
+
+<body>
+  <div id="root" v-cloak>
+    <el-container>
+      <el-main style="padding:15px 20px 0 20px">
+        <div style="margin-bottom:15px">
+          <cool-form-view ref="formItems" :form-items="formItems" @update-form='updateForm' @remote-method="remoteMethod" size="mini" :inline="true" label-width="110px"></cool-form-view>
+          <!-- @querysearch="querySearch" -->
+        </div>
+        <div>
+          <span style="font-size:16px;vertical-align: middle;font-weight:bold">出货单清单</span>
+          <cool-button-group :buttons="deliveryTableBtn" @button-click="buttonsevent"></cool-button-group>
+          <cool-table-view ref="deliveryTable" :data="deliveryFullData.map(p => p.order)" :columns="deliveryTableColumns" :cell-style="cellRow" stripe @table-selection-change="deliveryTableSelection"></cool-table-view>
+        </div>
+      </el-main>
+
+      <el-dialog :visible.sync="containerDialogVisible" :title="containerDialogTitle" :close-on-click-modal="false" width="1000px" top="5vh" @close="containerDialogClose">
+        <div style="margin-bottom:15px">
+          <cool-form-view ref="containerForm" :form-items="containerForm" size="mini" :inline="true" label-width="auto" @update-form='updateContainerForm'></cool-form-view>
+        </div>
+        <span style="font-size:16px;vertical-align: middle;font-weight:bold">货柜明细</span>
+        <div>
+          <el-button size="mini" @click="removeContainerData" :disabled="containerDialogTitle=='新增货柜'||selectedContainer.length <= 0">移除</el-button>
+        </div>
+        <div style="height:300px;">
+          <cool-table-view :data="containerData" :columns="containerColumns" :cell-style="cellRow" stripe @table-selection-change="containerSelection"></cool-table-view>
+        </div>
+        <div slot="footer">
+          <cool-save-button save-btn-text="确 认" back-btn-text="关 闭" @save-event="containerSaveClick" @back-event="containerDialogVisible=false"></cool-save-button>
+        </div>
+      </el-dialog>
+
+      <el-dialog :visible.sync="woodenCaseDialogVisible" :title="woodenCaseDialogTitle" :close-on-click-modal="false" width="auto" top="5vh" @close="woodenCaseDialogClose">
+        <el-button @click="woodenCaseSaveClick" size="mini">确 认</el-button>
+        <cool-table-view :data="woodenCaseData" :columns="woodenCaseColumns" :cell-style="cellRow" stripe @table-selection-change="woodenCaseSelection" style="height:500px"></cool-table-view>
+      </el-dialog>
+    </el-container>
+  </div>
+</body>

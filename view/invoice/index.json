@@ -1,0 +1,23 @@
+{
+  "apiName": "sale",
+  "backItems": {
+    "form": [{
+      "type": "input",
+      "value": "",
+      "label": "当前状态",
+      "name": "status",
+      "style": {
+        "width": "100%"
+      },
+      "disabled": true
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "退回原因",
+      "name": "description",
+      "style": {
+        "width": "100%"
+      }
+    }]
+  }
+}

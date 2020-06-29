@@ -1,0 +1,93 @@
+{
+  "queryCondition": {
+    "projectName": {
+      "value": "",
+      "mode": "不参与",
+      "name": "项目名称",
+      "dataType": "string",
+      "fieldName": "projectName",
+      "tableRelationMode": "AND",
+      "form": "input",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "engCode": {
+      "value": "",
+      "mode": "不参与",
+      "name": "工程代号",
+      "dataType": "string",
+      "fieldName": "engCode",
+      "tableRelationMode": "AND",
+      "form": "input",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "customerOrderNo": {
+      "value": "",
+      "mode": "不参与",
+      "name": "客户订单编号",
+      "dataType": "string",
+      "fieldName": "customerOrderNo",
+      "tableRelationMode": "AND",
+      "form": "input",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "formno": {
+      "value": "",
+      "mode": "不参与",
+      "name": "内部订单编号",
+      "dataType": "string",
+      "fieldName": "formno",
+      "tableRelationMode": "AND",
+      "form": "input",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "status": {
+      "value": "",
+      "mode": "不参与",
+      "name": "订单状态",
+      "dataType": "string",
+      "fieldName": "status",
+      "tableRelationMode": "AND",
+      "form": "select",
+      "options": [],
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "customerName": {
+      "value": "",
+      "mode": "不参与",
+      "name": "客户名称",
+      "dataType": "string",
+      "fieldName": "customerName",
+      "tableRelationMode": "AND",
+      "form": "input",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "createDate": {
+      "value": ["", ""],
+      "mode": "之间",
+      "name": "创建日期",
+      "dataType": "date",
+      "fieldName": "createDate",
+      "tableRelationMode": "AND",
+      "form": "date",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "deliveryDate": {
+      "value": ["", ""],
+      "mode": "不参与",
+      "name": "预计发货日期",
+      "dataType": "date",
+      "fieldName": "deliveryDate",
+      "tableRelationMode": "AND",
+      "form": "date",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    }
+  }
+}

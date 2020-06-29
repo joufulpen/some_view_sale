@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8" />
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <title>订单管理</title>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+
+    .diyTabClass {
+      display: flex;
+      flex-direction: column;
+      height: 100%
+    }
+
+    .diyBtnGroupClass {
+      flex-shrink: 0;
+      height: auto
+    }
+
+    .diyTableClass {
+      height: 100%;
+      flex: 1;
+      flex-basis: auto;
+      overflow: auto;
+      display: block
+    }
+  </style>
+  <script>
+    window.coolLocals = {}
+    window.extraJsons = ['dtlTable.json']
+  </script>
+  <script src="/settings.js"></script>
+</head>
+
+<body>
+  <div id="root" v-cloak>
+    <!-- <el-container>
+      <el-header height="auto">
+        <cool-button-group :buttons="buttons" @button-click="buttonsevent"></cool-button-group>
+      </el-header>
+      <el-main>
+        <el-container>
+          <cool-query-ago :origin-condition="originCondition" @get-condition="getCondition"></cool-query-ago>
+          <el-container>
+            <el-main>
+              <cool-page-table stripe="stripe" highlight-current-row="highlight-current-row" :v-loading="tableLoading" :page-sizes="[10, 20, 50, 100,200]" :cell-style="cellRow" @table-row-click="handleRowClick" :columns="Hdrcolumns" :total="total"
+                :current-page.sync="condition.current" :data="HdrData" :page-size.sync="condition.offset" @pagination-size-change="handleSizeChange" @pagination-current-change="handlePageChange" :layout="layout" border="border" :show-page="true">
+              </cool-page-table>
+            </el-main>
+            <el-footer height="264px" ref="footer" v-if="!beingSelected">
+              <el-tabs type="border-card" v-model="activeName">
+                <el-tab-pane label="产品明细" name="first">
+                  <cool-table-view v-if="activeName === 'first'" :columns="Dtlcolumns" :data="DtlData" border="border" :cell-style="cellRow" highlight-current-row="highlight-current-row" stripe></cool-table-view>
+                </el-tab-pane>
+
+                <el-tab-pane label="历史状态" name="second">
+                  <cool-table-view v-if="activeName === 'second'" :columns="historylist" :data="historyData" border="border" :cell-style="cellRow"></cool-table-view>
+                </el-tab-pane>
+
+                <el-tab-pane label="订单收款" name="third" class="diyTabClass">
+                  <cool-button-group :buttons="receiptButtons" @button-click="receiptButtonsevent" class="diyBtnGroupClass"></cool-button-group>
+                  <cool-table-view v-if="activeName === 'third'" ref="receiptTable" :columns="receiptColumns" :data="receiptData" :button="true" border="border" :cell-style="cellRow" stripe @table-selection-change="receiptSelection" class="diyTableClass"></cool-table-view>
+                </el-tab-pane>
+
+                <el-tab-pane label="附件" name="fourth" class="diyTabClass">
+                  <cool-button-group :buttons="uploadBtns" @button-click="uploadBtnsEvent" class="diyBtnGroupClass"></cool-button-group>
+                  <cool-table-view v-if="activeName === 'fourth'" ref="multipleTable" :size="size" :columns="fileList" :data="updatedData" :cell-style="cellRow" border="border" @table-selection-change="uploadedSelect" class="diyTableClass"></cool-table-view>
+                </el-tab-pane>
+
+
+                <el-tab-pane label="木箱清单" name="fifth" class="diyTabClass">
+                  <div class="diyBtnGroupClass">
+                    <el-button style="border:none" size="mini" :disabled="woodenCaseSelection.length<=0" @click="woodenCasePrint">
+                      <svg class="icon" aria-hidden="true" style="font-size: 14px;margin-right:5px">
+                        <use xlink:href="#icondayin"></use>
+                      </svg>
+                      打印
+                    </el-button>
+                  </div>
+                  <cool-table-view v-if="activeName === 'fifth'" ref="woodenCaseTable" :columns="woodenCaseColumns" :data="woodenCaseData" border="border" :cell-style="cellRow" stripe @table-selection-change="selectWoodenCase" @table-row-click="woodenCaseRowClick"
+                    class="diyTableClass"></cool-table-view>
+                </el-tab-pane>
+              </el-tabs>
+            </el-footer>
+          </el-container>
+        </el-container>
+      </el-main>
+    </el-container> -->
+    <cool-master-view ref="masterView" :show-dtl-table="showDtlTable" :unique-deploy-key="uniqueDeployKey" :axios-setting="axiosSetting" :dialogs="dialogs" :is-methods="isMethods" @table-row-click="tableRowClick" @table-select-change="tableSelectionChange"
+      @pagination-size-change="paginationSizeChange" @pagination-current-change="paginationCurrentChange" @get-condition="getCondition" @check-btn="handleCheckBtn" @edit-btn="handleEditBtn" @print-btn="handlePrintBtn" @flowcontrol-btn="handleFlowControlBtn"
+      @quotation-btn="handleQuotationBtn" @part-btn="handlePartBtn" @aluminum-btn="handleAluminumBtn" @accessory-btn="handleAccessoryBtn" @package-btn="handlePackageBtn" @woodencase-btn="handleWoodencaseBtn" @closedialog="iframeDialogBackEvent"
+      @save-event="dialogSaveEvent" @back-event="dialogBackEvent" @dlt-button-click="(arg,label)=>dltButtonsEvent(arg.currentTarget.textContent.trim(),label)" @dlt-select-change="dltTableSelectionChange" @tab-click="tabClick" @custom-part-btn="customPartBtn"></cool-master-view>
+    <cool-upload v-if="uploadDialogVisible" :visible.sync="uploadDialogVisible" :parent-id="parentId" :parent-type="parentType" @upload-success="uploadSuccess"></cool-upload>
+
+    <!-- 新建订单收款弹窗，考虑是否需要用coool-form控件 -->
+    <el-dialog :title="receiptDialogTitle" :close-on-click-modal="false" :visible.sync="dialogReceiptVisible" width="1000px" center @close="clearReceiptsForm">
+      <!-- <el-button-group>
+        <el-button @click="saveContactClick" size="mini" :disabled="dialogLoading">保 存</el-button>
+        <el-button @click="dialogReceiptVisible=false" size="mini" :disabled="dialogLoading">取 消</el-button>
+      </el-button-group> -->
+      <cool-form-view ref="receiptsForm" :form-items="receiptFormItems" :inline="true" label-width="110px" size="mini" @update-form="updateReceiptForm"></cool-form-view>
+      <!-- v-loading="dialogLoading" -->
+      <div slot="footer" class="custom-maintainence-footer">
+        <cool-save-button save-btn-text="保 存" back-btn-text="取 消" @save-event="saveContactClick" @back-event="dialogReceiptVisible=false"></cool-save-button>
+        <!-- @save-btn-disabled="dialogLoading" -->
+      </div>
+    </el-dialog>
+
+    <!-- <el-dialog title="编辑订单收款" :visible.sync="dialogReceiptVisible2" width="1000px" center @close="clearReceiptsForm">
+      <el-button-group>
+        <el-button @click="updateContactClick" size="mini" :disabled="dialogLoading">保 存</el-button>
+        <el-button @click="dialogReceiptVisible2=false" size="mini" :disabled="dialogLoading">取 消</el-button>
+      </el-button-group>
+      <cool-form-view ref="receiptsForm" :form-items="receiptFormItems" :inline="true" label-width="100px" size="mini" @update-form="updateReceiptForm" v-loading="dialogLoading"></cool-form-view>
+    </el-dialog> -->
+
+    <!-- 客户沟通信息弹窗 -->
+    <el-dialog ref="customerDialog" :title="customerDialogTitle" :visible.sync="customerDialogTitleVisible" width="480px" :close-on-click-modal="false" @close="customerDialogBackEvent">
+      <div style="border:1px solid #DCDFE6">
+        <cool-form-view ref="customerInfoForm" :form-items="customerDialogFormItems" @update-form='updateCutomerInfoForm' size="mini" :inline="true" label-width="150px"></cool-form-view>
+      </div>
+      <div slot="footer">
+        <cool-save-button save-btn-text="确 认" back-btn-text="返 回" @save-event="customerDialogSaveEvent" @back-event="customerDialogBackEvent"></cool-save-button>
+      </div>
+    </el-dialog>
+  </div>
+</body>

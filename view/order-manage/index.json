@@ -1,0 +1,217 @@
+{
+  "apiName": "sale",
+  "receiptFormItems": {
+    "form": [{
+      "type": "input",
+      "value": "",
+      "label": "订单编号",
+      "name": "code",
+      "style": {
+        "width": "33.3%"
+      },
+      "disabled": true
+    }, {
+      "type": "select",
+      "value": "",
+      "label": "公司名称",
+      "name": "name",
+      "options": [],
+      "style": {
+        "width": "33.3%"
+      },
+      "inputStyle": {
+        "width": "180px"
+      },
+      "disabled": false,
+      "rules": {
+        "required": true,
+        "message": "此项不能为空",
+        "trigger": "change"
+      }
+    }, {
+      "type": "select",
+      "value": "",
+      "label": "收款账号编号",
+      "name": "receiptNumber",
+      "options": [],
+      "style": {
+        "width": "33.3%"
+      },
+      "inputStyle": {
+        "width": "180px"
+      },
+      "rules": {
+        "required": true,
+        "message": "此项不能为空",
+        "trigger": "change"
+      }
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "收款账号名称",
+      "name": "receiptAccount",
+      "style": {
+        "width": "33.3%"
+      },
+      "disabled": true
+    }, {
+      "type": "inputNumber",
+      "value": "",
+      "label": "收款金额",
+      "name": "amount",
+      "min": 0,
+      "precision": 2,
+      "style": {
+        "width": "33.3%"
+      },
+      "inputStyle": {
+        "width": "180px"
+      },
+      "rules": {
+        "required": true,
+        "message": "此项不能为空",
+        "trigger": "blur"
+      }
+    }, {
+      "type": "date",
+      "value": "",
+      "label": "收款时间",
+      "name": "receiptDate",
+      "style": {
+        "width": "33.3%"
+      },
+      "inputStyle": {
+        "width": "180px"
+      },
+      "rules": {
+        "required": true,
+        "message": "此项不能为空",
+        "trigger": "blur"
+      }
+    }, {
+      "type": "select",
+      "value": "",
+      "label": "收款类型",
+      "name": "receiptType",
+      "options": [],
+      "style": {
+        "width": "33.3%"
+      },
+      "inputStyle": {
+        "width": "182px"
+      },
+      "rules": {
+        "required": true,
+        "message": "此项不能为空",
+        "trigger": "change"
+      }
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "支付银行",
+      "name": "payBank",
+      "style": {
+        "width": "33.3%"
+      },
+      "inputStyle": {
+        "width": "180px"
+      }
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "支付账号",
+      "name": "payAccount",
+      "style": {
+        "width": "33.3%"
+      }
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "备注",
+      "name": "description",
+      "style": {
+        "width": "33.3%"
+      },
+      "inputStyle": {
+        "width": "180px"
+      }
+    }]
+  },
+  "customerDialogFormItems":{
+    "form":[{
+      "type": "textarea",
+        "value": "",
+        "label": "客户交代",
+        "name": "account",
+        "style": {
+          "width": "100%"
+        },
+        "inputStyle": "width:193px",
+        "rules": {
+        "required": true,
+        "message": "此项不能为空",
+        "trigger": "change"
+      }
+    },{
+      "type": "textarea",
+        "value": "",
+        "label": "中文翻译",
+        "name": "translate",
+        "style": {
+          "width": "100%"
+        },
+        "inputStyle": "width:193px"
+    }, {
+      "type": "select",
+      "value": "",
+      "label": "状态",
+      "name": "status",
+      "clearable": false,
+      "style": {
+        "width": "100%"
+      },
+      "inputStyle": "width:193px",
+      "options": [{
+        "value": "进行中"
+      }, {
+        "value": "已完成"
+      }],
+      "rules": {
+        "required": true,
+        "message": "此项不能为空",
+        "trigger": "change"
+      }
+    }, {
+        "type": "date",
+        "value": "",
+        "label": "提出时间",
+        "name": "proposeDate",
+        "style": {
+          "width": "100%"
+        },
+        "inputStyle": "width:193px"
+    },{
+        "type": "date",
+        "value": "",
+        "label": "完成时间",
+        "name": "completeDate",
+        "style": {
+          "width": "100%"
+        },
+        "inputStyle": "width:193px",
+        "disabled": true
+    }]
+  },
+  "备用": {
+    "form": [{
+      "type": "input",
+      "value": "",
+      "label": "确认收款人",
+      "name": "receiptor",
+      "disabled": true,
+      "style": {
+        "width": "33.3%"
+      }
+    }]
+  }
+}

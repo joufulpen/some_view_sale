@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>流程控制</title>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+  </style>
+  <script>
+    window.coolLocals = {}
+  </script>
+  <script src="/settings.js"></script>
+</head>
+
+<body>
+  <div id="root" v-cloak>
+    <el-row type="flex" style="height:100%">
+      <el-col :span="15" style="overflow:auto">
+        <cool-work-flow ref="workflow" :request-url="workflow.url" :def-id="workflow.defId" :inst-id="workflow.instId"></cool-work-flow>
+      </el-col>
+      <el-col :span="9" style="overflow:auto">
+        <el-card>
+          <div slot="header">
+            <span>流程管理</span>
+          </div>
+          <el-select v-model="targetNode" placeholder="请选择目标节点" style="width:100%;margin-bottom:10px" @change="clearContent">
+            <el-option v-for="item in availableNodes" :key="item.index" :label="item.label" :value="item.value"></el-option>
+          </el-select>
+
+          <el-form size="small">
+            <el-form-item v-if="targetNode!=='' && targetNode !== nextNode.value">
+              <el-input type="textarea" resize="none" placeholder="请输入退回原因" v-model="rollbackRemark"></el-input>
+            </el-form-item>
+
+            <el-form-item v-if="nextNode.value == targetNode && (targetNode == '图纸处理' || targetNode == '拆单处理')">
+              <div slot="label" v-if="targetNode == '拆单处理'">拆单人员</div>
+              <div slot="label" v-if="targetNode == '图纸处理'">技术员</div>
+              <el-select v-model="submitContent.operator" placeholder="请选择用户" style="width:100%">
+                <el-option v-for="item in accountList" :key="item.index" :label="item.name" :value="item.operator"></el-option>
+              </el-select>
+            </el-form-item>
+            <el-form-item label="包装人员" v-if="targetNode == '拆单处理'">
+              <el-select v-model="submitContent.packagingOr" placeholder="请选择用户" style="width:100%">
+                <el-option v-for="item in accountList" :key="item.index" :label="item.name" :value="item.operator"></el-option>
+              </el-select>
+            </el-form-item>
+            <el-form-item v-if="nextNode.value == targetNode && (targetNode == '图纸处理' || targetNode == '拆单处理')">
+              <el-date-picker v-model="submitContent.completionDate" :clearable="false" style="width:100%"></el-date-picker>
+            </el-form-item>
+          </el-form>
+
+          <el-button style="width:100%;margin-top:10px" type="primary" :disabled="confirmBtnDisabled" @click="updateStatus">确认</el-button>
+        </el-card>
+        <el-card>
+          <div slot="header">
+            <span>特殊操作</span>
+          </div>
+          <el-button type="danger" style="width:100%" @click="terminateBtn">终止</el-button>
+        </el-card>
+      </el-col>
+    </el-row>
+  </div>
+</body>
+
+</html>

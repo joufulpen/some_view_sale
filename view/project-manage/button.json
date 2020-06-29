@@ -1,0 +1,57 @@
+{
+  "buttons": [{
+      "text": "查找",
+      "size": "mini",
+      "icon": "#iconchaxun",
+      "controlDisable": "",
+      "key": "query"
+    },
+    {
+      "text": "新增项目",
+      "size": "mini",
+      "icon": "#iconxinzeng",
+      "controlDisable": "",
+      "key": "newproject-btn"
+    },
+    {
+      "text": "编辑",
+      "size": "mini",
+      "icon": "#iconERP_bianji",
+      "disabled": true,
+      "controlDisable": "single",
+      "key": "edit-btn"
+    },
+    {
+      "text": "删除",
+      "size": "mini",
+      "icon": "#iconERP_shanchu",
+      "disabled": true,
+      "controlDisable": "single",
+      "key": "delete"
+    },
+    {
+      "text": "打印",
+      "size": "mini",
+      "icon": "#icondayin",
+      "disabled": true,
+      "controlDisable": "single",
+      "key": "print-btn"
+    },
+    {
+      "text": "导出",
+      "size": "mini",
+      "icon": "#icondaochuwenjian",
+      "controlDisable": "",
+      "disabled": true,
+      "key": "export-btn"
+    },
+    {
+      "text": "新增订单",
+      "size": "mini",
+      "icon": "#iconxinzeng",
+      "disabled":true,
+      "controlDisable": "single",
+      "key": "neworder-btn"
+    }
+  ]
+}

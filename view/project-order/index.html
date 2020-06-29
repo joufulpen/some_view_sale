@@ -1,0 +1,92 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8" />
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <title>项目订单维护</title>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+  </style>
+  <script>
+    window.coolLocals = {}
+  </script>
+  <!-- <script src="../../cool-master/cool-master.js"></script> -->
+  <script type="post-load" src="../libs/xlsx-populate-no-encryption.min.js"></script>
+  <script src="/settings.js"></script>
+</head>
+<!-- <style>
+  .el-tabs,
+.el-tabs__content,
+.el-tab-pane {
+  height: 700px;
+}
+</style> -->
+
+<body>
+  <div id="root" v-cloak>
+    <el-container>
+      <!-- <el-header height="auto" v-if="status!== 'readonly'">
+        <div style="padding:15px">
+          <el-button type="success" @click="projectSaveEvent">保 存</el-button>
+          <el-button @click="cancelEvent">取 消</el-button>
+        </div>
+      </el-header> -->
+      <el-main>
+        <div style="display:flex;flex-flow:column nowrap">
+          <el-tabs type="border-card">
+            <el-tab-pane label="订单信息">
+              <div style="margin-bottom:15px" v-for="item in orderFormItems" :key="item.index">
+                <span style="font-size:16px;vertical-align: middle;font-weight:bold">{{item.title}}</span>
+                <cool-form-view ref="coolForm" :form-items="item.formItems" size="mini" :inline="true" :label-width="labelWidth" @update-form="masterUpdateForm"></cool-form-view>
+              </div>
+            </el-tab-pane>
+            <el-tab-pane label="项目信息">
+              <div style="margin-bottom:15px" v-for="item in orderMessageFormItems" :key="item.index">
+                <span style="font-size:16px;vertical-align: middle;font-weight:bold">{{item.title}}</span>
+                <cool-form-view ref="otherCoolForm" :form-items="item.formItems" size="mini" :inline="true" :label-width="labelWidth" @update-form='assistantUpdateForm'></cool-form-view>
+              </div>
+            </el-tab-pane>
+          </el-tabs>
+
+          <div style="padding-top:15px;height:600px">
+            <span style="font-size:16px;vertical-align: middle;font-weight:bold">产品信息表</span>
+            <cool-button-group :buttons="status == 'readonly' ? [] : productInfoBtn" @button-click="buttonEvent"></cool-button-group>
+            <cool-table-view :data="productInfoData" :columns="productInfoColumns" :cell-style="cellRow" @table-selection-change="selection"></cool-table-view>
+          </div>
+        </div>
+      </el-main>
+      <!-- <el-footer v-if="status!== 'readonly'" class="custom-maintainence-footer">
+        <cool-save-button save-btn-text="保 存" back-btn-text="取 消" @save-event="projectSaveEvent" @back-event="cancelEvent"></cool-save-button>
+      </el-footer> -->
+    </el-container>
+    <!--  <cool-edit-dialog ref="editDialog" :width="editDialogWidth" :edit-dialog-title="editDialogTitle" :label-width="labelWidth" :visible.sync="editDialogTitleVisible" :form-items="editDialogFormItems" @save-event="saveEvent" @update-form='updateForm'></cool-edit-dialog> -->
+    <el-dialog ref="editDialog" :title="editDialogTitle" :visible.sync="editDialogTitleVisible" width="400px" :close-on-click-modal="false" @close="dialogClose">
+      <div style="border:1px solid #DCDFE6">
+        <cool-form-view ref="formItems" :form-items="editDialogFormItems" @update-form='updateForm' size="mini" :inline="true" label-width="100px"></cool-form-view>
+      </div>
+      <div slot="footer">
+        <cool-save-button save-btn-text="确 认" back-btn-text="返 回" @save-event="saveEvent" @back-event="backEvent"></cool-save-button>
+      </div>
+    </el-dialog>
+
+    <!-- 上传弹窗 -->
+    <el-dialog title="产品导入" :visible="importVisible" :close-on-click-modal="false" @close="importDialogClose" width="440px" v-loading="dialogLoading">
+      <el-row v-if="importVisible">
+        <el-col :span="16">
+          <el-card shadow="never" style="height: 100px;width:250px;">
+            <el-upload ref="upload" action="" :auto-upload="false" :multiple="false" :limit="2" :on-change="handleChange" :on-remove="handleRemove" :file-list="uploadlist">
+              <el-button size="mini" type="primary">选择文件</el-button>
+            </el-upload>
+          </el-card>
+        </el-col>
+        <el-col :span="8" style="text-align:center">
+          <el-button @click="templateDownload" type="success">模板下载</el-button>
+          <el-button :disabled="uploadlist.length == 0" @click="btnImport_click" type="success" style="margin:20px">导入</el-button>
+        </el-col>
+      </el-row>
+    </el-dialog>
+  </div>
+</body>

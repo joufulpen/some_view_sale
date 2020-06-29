@@ -1,0 +1,55 @@
+{
+  "productInfoColumns": [{
+      "type": "selection"
+    }, {
+      "type": "index",
+      "label": "序号"
+    }, {
+      "prop": "buildingName",
+      "label": "建筑名称"
+    },
+    {
+      "prop": "floor",
+      "label": "楼层"
+    },
+    {
+      "prop": "roomNo",
+      "label": "房间号"
+    },
+    {
+      "prop": "windowNo",
+      "label": "窗号"
+    },
+    {
+      "prop": "windowTypeNo",
+      "label": "窗型号"
+    },
+    {
+      "prop": "windowType",
+      "label": "窗类型"
+    },
+    {
+      "prop": "splitNo",
+      "label": "分体号"
+    },
+    {
+      "prop": "reqDeliveryDate",
+      "label": "要求到货日期"
+    },
+    {
+      "prop": "reqApprovalDate",
+      "label": "要求核准日期"
+    },
+    {
+      "prop": "actualArrivalDate",
+      "label": "实际到货日期"
+    },
+    {
+      "prop": "actualApprovalDate",
+      "label": "实际核准日期"
+    },{
+      "prop":"qty",
+      "label":"数量"
+    }
+  ]
+}

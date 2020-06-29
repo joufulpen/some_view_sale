@@ -1,0 +1,73 @@
+{
+  "buttons": [{
+      "text": "查询",
+      "size": "mini",
+      "icon": "#iconchaxun",
+      "key": "query"
+    },
+    {
+      "text": "查看",
+      "size": "mini",
+      "icon": "#iconchakan",
+      "disabled": true,
+      "key": "check-btn"
+    },
+    {
+      "text": "新增",
+      "size": "mini",
+      "icon": "#iconxinzeng",
+      "key": "create-btn"
+    },
+    {
+      "text": "编辑",
+      "size": "mini",
+      "icon": "#iconERP_bianji",
+      "disabled": true,
+      "key": "edit-btn"
+    },
+    {
+      "text": "删除",
+      "size": "mini",
+      "icon": "#iconERP_shanchu",
+      "disabled": true,
+      "key": "delete"
+    },
+    {
+      "text": "提交",
+      "size": "mini",
+      "icon": "#icontijiao",
+      "disabled": true,
+      "key": "submit-btn"
+    },
+    {
+      "text": "退回",
+      "size": "mini",
+      "icon": "#icontuihui",
+      "disabled": true,
+      "key": "return-btn"
+    },
+    {
+      "text": "打印",
+      "size": "mini",
+      "icon": "#icondayin",
+      "disabled": true,
+      "key": "print-btn"
+    }
+  ],
+  "uploadBtns": [{
+    "text": "新建",
+    "size": "mini",
+    "icon": "#iconxinzeng",
+    "disabled": true
+  }, {
+    "text": "下载",
+    "size": "mini",
+    "icon": "#iconxiazai",
+    "disabled": true
+  }, {
+    "text": "删除",
+    "size": "mini",
+    "icon": "#iconERP_shanchu",
+    "disabled": true
+  }]
+}

@@ -1,0 +1,106 @@
+{
+  "queryCondition": {
+    "projectName": {
+      "value": "",
+      "name": "项目名称",
+      "fieldName": "projectName",
+      "form": "input",
+      "tableRelationMode": "AND",
+      "dataType": "string",
+      "mode": "不参与",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "engCode": {
+      "value": "",
+      "name": "工程代号",
+      "fieldName": "engCode",
+      "form": "input",
+      "tableRelationMode": "AND",
+      "dataType": "string",
+      "mode": "不参与",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "customerName": {
+      "value": "",
+      "name": "客户名称",
+      "fieldName": "customerName",
+      "form": "input",
+      "tableRelationMode": "AND",
+      "dataType": "string",
+      "mode": "不参与",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "city": {
+      "value": "",
+      "name": "项目城市",
+      "fieldName": "city",
+      "form": "select",
+      "options": [],
+      "tableRelationMode": "AND",
+      "dataType": "string",
+      "mode": "不参与",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "type": {
+      "value": "",
+      "name": "项目类型",
+      "fieldName": "type",
+      "form": "select",
+      "options": [],
+      "tableRelationMode": "AND",
+      "dataType": "string",
+      "mode": "不参与",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "status": {
+      "value": "",
+      "name": "项目状态",
+      "fieldName": "status",
+      "form": "select",
+      "options": [],
+      "tableRelationMode": "AND",
+      "dataType": "string",
+      "mode": "不参与",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "startDate": {
+      "value": ["", ""],
+      "name": "立项日期",
+      "fieldName": "startDate",
+      "form": "date",
+      "tableRelationMode": "AND",
+      "dataType": "date",
+      "mode": "不参与",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "completeDate": {
+      "value": ["", ""],
+      "name": "结项日期",
+      "fieldName": "completeDate",
+      "form": "date",
+      "tableRelationMode": "AND",
+      "dataType": "date",
+      "mode": "不参与",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "createDate": {
+      "value": ["", ""],
+      "name": "创建日期",
+      "fieldName": "createDate",
+      "form": "date",
+      "tableRelationMode": "AND",
+      "dataType": "date",
+      "mode": "之间",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    }
+  }
+}

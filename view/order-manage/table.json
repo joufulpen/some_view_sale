@@ -1,0 +1,83 @@
+{
+  "hdrTableData": {
+    "cellStyle": {
+      "height": "30px",
+      "padding": "5px 0"
+    },
+    "data": [],
+    "total": 0,
+    "currentPage": 1,
+    "pageSize": 10,
+    "columns": [{
+        "type": "selection"
+      },{
+        "label": "序号",
+        "prop": "index",
+        "fixed": "fixed",
+        "width": "50px"
+      },
+      {
+        "prop": "customerOrderNo",
+        "label": "客户订单编号",
+        "width": "160",
+        "fixed": "fixed"
+      },
+      {
+        "prop": "formno",
+        "label": "内部订单编号",
+        "width": "160"
+      },
+      {
+        "prop": "projectName",
+        "label": "项目名称"
+      },
+      {
+        "prop": "engCode",
+        "label": "工程代号"
+      },
+      {
+        "prop": "customerName",
+        "label": "客户名称"
+      },
+      {
+        "prop": "buildingName",
+        "label": "建筑名称"
+      },
+      {
+        "prop": "amount",
+        "label": "金额"
+      },
+      {
+        "prop": "deliveryDate",
+        "label": "预计发货日期",
+        "dateFormatter": true
+      },
+      {
+        "prop": "type",
+        "label": "订单类型"
+      },
+      {
+        "prop": "status",
+        "label": "订单状态"
+      },
+      {
+        "prop": "operator",
+        "label": "处理人"
+      },
+      {
+        "prop": "operationDate",
+        "label": "处理时间",
+        "dateFormatter": true
+      },
+      {
+        "prop": "createDate",
+        "label": "创建日期",
+        "dateFormatter": true
+      },
+      {
+        "prop": "createName",
+        "label": "创建人"
+      }
+    ]
+  }
+}

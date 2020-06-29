@@ -1,0 +1,73 @@
+{
+  "hdrTableData": {
+    "data": [],
+    "showPage": true,
+    "total": 0,
+    "currentPage": 1,
+    "pageSize": 10,
+    "layout": "total, sizes, prev, pager, next, jumper",
+    "highlightCurrentRow": true,
+    "cellStyle": {
+      "height": "30px",
+      "padding": "3px 0"
+    },
+    "stripe": true,
+    "columns": [{
+        "type": "selection"
+      },{
+        "label": "序号",
+        "prop": "index",
+        "fixed": "fixed",
+        "width": "50px"
+      },
+      {
+        "prop": "engCode",
+        "label": "工程代号"
+      },
+      {
+        "prop": "projectName",
+        "label": "项目名称",
+        "width": "160"
+      },
+      {
+        "prop": "customerName",
+        "label": "客户名称"
+      },
+      {
+        "prop": "type",
+        "label": "项目类型"
+      },
+      {
+        "prop": "city",
+        "label": "项目城市"
+      },
+      {
+        "prop": "startDate",
+        "label": "立项日期",
+        "dateFormatter": true
+      },
+      {
+        "prop": "completeDate",
+        "label": "结项日期",
+        "dateFormatter": true
+      },
+      {
+        "prop": "createName",
+        "label": "创建人"
+      },
+      {
+        "prop": "createDate",
+        "label": "创建日期",
+        "dateFormatter": true
+      },
+      {
+        "prop": "status",
+        "label": "项目状态"
+      },
+      {
+        "prop": "description",
+        "label": "备注"
+      }
+    ]
+  }
+}

@@ -1,0 +1,422 @@
+{
+  "apiName": "sale",
+  "orderMessageFormItems":[{
+    "formItems": {
+      "form": [{
+        "type": "switch",
+        "value": "false",
+        "label": "是否提供配件样板",
+        "activeText":"是",
+        "inactiveText":"否",
+        "style": "width:300px",
+        "name": "isFittingTemplate"
+      },{
+        "type": "switch",
+        "value": "false",
+        "label": "是否提供玻璃样板",
+        "activeText":"是",
+        "inactiveText":"否",
+        "style": "width:300px",
+        "name": "isTestPlate"
+      },{
+        "type": "switch",
+        "value": "false",
+        "label": "是否提供色板样板",
+        "activeText":"是",
+        "inactiveText":"否",
+        "style": "width:300px",
+        "name": "isProvideSwatches"
+      },{
+        "type": "switch",
+        "value": "false",
+        "label": "是否有异型窗",
+        "activeText":"是",
+        "inactiveText":"否",
+        "style": "width:300px",
+        "name": "isSpecialWindow"
+      },{
+        "type": "switch",
+        "value": "false",
+        "label": "是否开新模具",
+        "activeText":"是",
+        "inactiveText":"否",
+        "style": "width:300px",
+        "name": "isNewMould"
+      }]
+    }
+  }],
+  "editDialogFormItems":{
+    "form":[{
+      "type": "textarea",
+        "value": "",
+        "label": "客户交代",
+        "name": "outstandingItems",
+        "style": {
+          "width": "100%"
+        },
+        "inputStyle": "width:193px",
+        "rules": {
+        "required": true,
+        "message": "此项不能为空",
+        "trigger": "change"
+      }
+    },{
+      "type": "textarea",
+        "value": "",
+        "label": "中文翻译",
+        "name": "translation",
+        "style": {
+          "width": "100%"
+        },
+        "inputStyle": "width:193px"
+    }, {
+      "type": "select",
+      "value": "",
+      "label": "状态",
+      "name": "status",
+      "clearable": false,
+      "style": {
+        "width": "100%"
+      },
+      "inputStyle": "width:193px",
+      "options": [{
+        "value": "进行中"
+      }, {
+        "value": "已完成"
+      }],
+      "rules": {
+        "required": true,
+        "message": "此项不能为空",
+        "trigger": "change"
+      }
+    }, {
+        "type": "date",
+        "value": "",
+        "label": "提出时间",
+        "name": "updDate",
+        "style": {
+          "width": "100%"
+        },
+        "inputStyle": "width:193px"
+    },{
+        "type": "date",
+        "value": "",
+        "label": "完成时间",
+        "name": "endDate",
+        "style": {
+          "width": "100%"
+        },
+        "inputStyle": "width:193px",
+        "disabled": true
+    }]
+  },
+  "orderFormItems": [{
+    "title": "项目基本信息",
+    "formItems": {
+      "form": [{
+        "type": "input",
+        "value": "",
+        "label": "项目名称",
+        "name": "projectName",
+        "style": "",
+        "inputStyle": "width:182px",
+        "disabled":false,
+        "rules": {
+        "required": true,
+        "message": "项目名称不能为空",
+        "trigger": "change"
+      }
+      }, {
+        "type": "select",
+        "options": [],
+        "value": "",
+        "label": "项目类型",
+        "name": "type",
+        "style": "",
+        "inputStyle": "width:182px",
+        "disabled":false,
+        "rules": {
+        "required": true,
+        "message": "项目类型不能为空",
+        "trigger": "change"
+      }
+      }, {
+        "type": "input",
+        "options": [],
+        "value": "",
+        "label": "工程代号",
+        "name": "engCode",
+        "inputStyle": "width:182px",
+        "style": ""
+      },{
+        "type": "select",
+        "options": [],
+        "value": "",
+        "label": "项目城市",
+        "name": "city",
+        "style": "",
+        "inputStyle": "width:182px",
+        "rules": {
+        "required": true,
+        "message": "项目城市不能为空",
+        "trigger": "change"
+      }
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "工程方数",
+        "inputStyle": "width:182px",
+        "name": "engineeringNu"
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "工程栋数",
+        "inputStyle": "width:182px",
+        "name": "numberWorks"
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "栋层数",
+        "inputStyle": "width:182px",
+        "name": "floorNu"
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "门窗系列",
+        "inputStyle": "width:182px",
+        "name": "dooWindowSeries"
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "门窗窗型",
+        "inputStyle": "width:182px",
+        "name": "windowType"
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "确定铝材颜色",
+        "inputStyle": "width:182px",
+        "name": "aluminumColor"
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "确定玻璃品种",
+        "inputStyle": "width:182px",
+        "name": "glassVariety"
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "喷涂粉年限",
+        "inputStyle": "width:182px",
+        "name": "sprayingPowderLife"
+      },
+      {
+        "type": "input",
+        "value": "",
+        "label": "项目地址",
+        "name": "address",
+        "style": {
+          "width": "100%"
+        },
+        "inputStyle":{
+          "width":"515px"
+        },
+        "rules": {
+        "required": true,
+        "message": "项目地址不能为空",
+        "trigger": "change"
+      }
+      },{
+        "type": "textarea",
+        "value": "",
+        "label": "项目备注",
+        "name": "description",
+         "inputStyle":{
+          "width":"515px"
+        },
+        "style": {
+          "width": "100%"
+        }
+      }]
+    }
+  }, {
+    "title": "客户信息",
+    "formItems": {
+      "form": [{
+        "type": "select",
+        "value": "",
+        "options":[],
+        "label": "客户名称",
+        "name": "customerCode",
+        "clearable": false,
+        "loading": false,
+        "filterable": true,
+        "remote": true,
+        "style": "",
+        "inputStyle": "width:182px",
+        "rules": {
+        "required": true,
+        "message": "客户名称不能为空",
+        "trigger": "change"
+      }
+      },{
+        "type": "select",
+        "options": [],
+        "value": "",
+        "label": "客户联系人",
+        "name": "customerContactCode",
+        "clearable": false,
+        "style": "",
+        "inputStyle": "width:182px",
+        "rules": {
+        "required": true,
+        "message": "客户联系人不能为空",
+        "trigger": "change"
+      }
+      },{
+        "type": "input",
+        "readonly":true,
+        "value": "",
+        "label": "客户地址",
+        "name": "customerAddress",
+        "inputStyle":{
+          "width":"515px"
+        },
+        "style": {
+          "width": "100%"
+        }
+      },{
+        "type": "textarea",
+        "readonly":true,
+        "value": "",
+        "label": "客户备注",
+        "name": "customerRemark",
+        "inputStyle":{
+          "width":"515px"
+        },
+        "style": {
+          "width": "100%"
+        }
+      }]
+    }
+  }, {
+    "title": "项目公司信息",
+    "formItems": {
+      "form": [{
+        "type": "select",
+        "options": [],
+        "value": "",
+        "label": "安装公司",
+        "name": "installCompanyCode",
+        "style": "",
+        "inputStyle": "width:182px",
+        "rules": {
+        "required": true,
+        "message": "安装公司不能为空",
+        "trigger": "change"
+      }
+      },{
+        "type": "input",
+        "options": [],
+        "value": "",
+        "label": "安装公司备注",
+        "name": "installRemark",
+        "inputStyle": "width:182px",
+        "style": ""
+      },{
+        "type": "select",
+        "options": [],
+        "value": "",
+        "label": "设计公司",
+        "name": "designCompanyCode",
+        "inputStyle": "width:182px",
+        "style": ""
+      },{
+        "type": "select",
+        "options": [],
+        "value": "",
+        "label": "建筑商",
+        "name": "developerCode",
+        "inputStyle": "width:182px",
+        "style": ""
+      }]
+    }
+  },{
+    "title": "项目时间信息",
+    "formItems": {
+      "form": [{
+        "type": "date",
+        "value": "",
+        "label": "立项日期",
+        "name": "startDate",
+        "inputStyle":{
+          "width":"182px"
+        },
+        "style": ""
+      },{
+        "type": "date",
+        "options": [],
+        "value": "",
+        "label": "结项日期",
+        "name": "completeDate",
+        "inputStyle":{
+          "width":"182px"
+        },
+        "style": ""
+      },{
+        "type": "date",
+        "value": "",
+        "label": "预计发货日期",
+        "name": "deliveryDate",
+        "inputStyle":{
+          "width":"182px"
+        },
+        "style": ""
+      },{
+        "type": "date",
+        "value": "",
+        "label": "预计到港日期",
+        "name": "arrivalDate",
+        "inputStyle":{
+          "width":"182px"
+        },
+        "style": ""
+      },{
+        "type": "date",
+        "value": "",
+        "label": "图纸开始日期",
+        "name": "commencedDate",
+        "inputStyle":{
+          "width":"182px"
+        },
+        "style": ""
+      },{
+        "type": "date",
+        "value": "",
+        "label": "图纸预计确认日期",
+        "name": "confirmationDate",
+        "inputStyle":{
+          "width":"182px"
+        },
+        "style": ""
+      },{
+        "type": "date",
+        "value": "",
+        "label": "客户要求到现场日期",
+        "name": "requestDate",
+        "inputStyle":{
+          "width":"182px"
+        },
+        "style": ""
+      }]
+    }
+  }]
+}

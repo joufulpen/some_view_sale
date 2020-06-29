@@ -1,0 +1,29 @@
+{
+  "productInfoColumns": [{
+      "type": "selection"
+    }, {
+      "type": "index",
+      "label": "序号",
+      "width": "55px"
+    }, {
+      "prop": "outstandingItems",
+      "label": "客户交代（英文）"
+    },
+    {
+      "prop": "translation",
+      "label": "中文翻译"
+    },
+    {
+      "prop": "status",
+      "label": "状态"
+    },
+    {
+      "prop": "updDate",
+      "label": "提出时间"
+    },
+    {
+      "prop": "endDate",
+      "label": "完成时间"
+    }
+  ]
+}

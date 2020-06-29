@@ -1,0 +1,21 @@
+{
+  "productInfoBtn": [{
+    "text": "导入产品",
+    "size": "mini",
+    "icon": "#icondaoruwenjian"
+  }, {
+    "text": "添加产品",
+    "size": "mini",
+    "icon": "#iconxinzeng"
+  }, {
+    "text": "编辑产品",
+    "size": "mini",
+    "icon": "#iconERP_bianji",
+    "disabled": true
+  }, {
+    "text": "删除产品",
+    "size": "mini",
+    "icon": "#iconERP_shanchu",
+    "disabled": true
+  }]
+}

@@ -1,0 +1,67 @@
+{
+  "hdrTableData": {
+    "highlightCurrentRow": true,
+    "showPage": true,
+    "data": [],
+    "cellRow": {
+      "height": "30px",
+      "padding": "5px 0"
+    },
+    "columns": [{
+      "type": "selection"
+    }, {
+      "prop": "formno",
+      "label": "发货单编号",
+      "fixed": "fixed",
+      "width": "100px"
+    }, {
+      "prop": "pformno",
+      "label": "内部订单编号",
+      "fixed": "fixed",
+      "width": "120px"
+    }, {
+      "prop": "type",
+      "label": "发货类型"
+    }, {
+      "prop": "customerName",
+      "label": "客户名称"
+    }, {
+      "prop": "logisticsCompany",
+      "label": "物流公司"
+    }, {
+      "prop": "logisticsType",
+      "label": "物流方式"
+    }, {
+      "prop": "deliveryTime",
+      "label": "发货时间",
+      "dateFormatter": true
+    }, {
+      "prop": "status",
+      "label": "发货单状态"
+    }, {
+      "prop": "exitPort",
+      "label": "出关口岸"
+    }, {
+      "prop": "arrivalPort",
+      "label": "到岸口岸"
+    }, {
+      "prop": "createName",
+      "label": "创建人"
+    }, {
+      "prop": "createDate",
+      "label": "创建日期",
+      "dateFormatter": true
+    }, {
+      "prop": "updateName",
+      "label": "修改人"
+    }, {
+      "prop": "updateDate",
+      "label": "修改日期",
+      "dateFormatter": true
+    }],
+    "layout": "total, sizes, prev, pager, next, jumper",
+    "total": 0,
+    "currentPage": 1,
+    "pageSize": 10
+  }
+}

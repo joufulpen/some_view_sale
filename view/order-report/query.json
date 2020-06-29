@@ -1,0 +1,26 @@
+{
+  "queryCondition": {
+    "createDate": {
+      "value": ["", ""],
+      "mode": "之间",
+      "name": "创建日期",
+      "dataType": "date",
+      "fieldName": "createDate",
+      "tableRelationMode": "AND",
+      "form": "date",
+      "modeList": ["不参与","之间"],
+      "tableName": "[Hdr]"
+    },
+    "deliveryDate": {
+      "value": ["", ""],
+      "mode": "不参与",
+      "name": "预计发货日期",
+      "dataType": "date",
+      "fieldName": "deliveryDate",
+      "tableRelationMode": "AND",
+      "form": "date",
+      "modeList": ["不参与","之间"],
+      "tableName": "[Hdr]"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8" />
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <title>新增项目</title>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+  </style>
+  <script>
+    window.coolLocals = {}
+  </script>
+  <!-- <script src="../../cool-master/cool-master.js"></script> -->
+  <script src="/settings.js"></script>
+</head>
+<style>
+</style>
+
+<body>
+  <div id="root" v-cloak>
+    <el-container>
+      <el-main>
+        <div style="display:flex;flex-flow:column nowrap">
+          <el-tabs type="border-card">
+            <el-tab-pane label="项目主信息">
+              <div v-for="item in orderFormItems" :key="item.index">
+                <span style="font-size:16px;vertical-align: middle;font-weight:bold;margin-left: 10px">{{item.title}}</span>
+                <cool-form-view ref="coolForm" :form-items="item.formItems" size="mini" :inline="true" :label-width="formLabelWidth" @update-form="masterUpdateForm" @remote-method="remoteMethod"></cool-form-view>
+                <!-- @query-search="querySearch" @select="select" @remote-method="remoteMethod"-->
+              </div>
+            </el-tab-pane>
+            <el-tab-pane label="项目辅信息">
+              <div style="margin-bottom:15px" v-for="item in orderMessageFormItems" :key="item.index">
+                <span style="font-size:16px;vertical-align: middle;font-weight:bold;margin-left: 10px" :key="item.index">{{item.title}}</span>
+                <cool-form-view ref="atherCoolForm" :form-items="item.formItems" @update-form='assistantUpdateForm' size="mini" :inline="true" label-width="130px" :key="item.index"></cool-form-view>
+              </div>
+            </el-tab-pane>
+          </el-tabs>
+          <div style="padding-top:15px;height:600px">
+            <span style="font-size:16px;vertical-align: middle;font-weight:bold">客户沟通信息</span>
+            <cool-button-group :buttons="productInfoBtn" @button-click="buttonEvent"></cool-button-group>
+            <cool-table-view ref="coolTable" :data="productInfoData" :columns="productInfoColumns" :cell-style="cellRow" @table-selection-change="selection"></cool-table-view>
+          </div>
+        </div>
+      </el-main>
+
+      <!-- <el-footer class="custom-maintainence-footer">
+        <cool-save-button save-btn-text="保 存" back-btn-text="取 消" @save-event="projectSaveEvent" @back-event="cancelEvent"></cool-save-button>
+      </el-footer> -->
+    </el-container>
+    <!-- 产品导入 -->
+    <!-- <el-dialog title="导入产品" :visible.sync="importProductDialogVisible" width="30%" center>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="importProductDialogVisible = false">返回</el-button>
+        <el-button type="primary" @click="importProductEvent">导入</el-button>
+      </span>
+    </el-dialog> -->
+    <!-- 新增编辑产品弹窗 -->
+    <!-- <cool-edit-dialog ref="editDialog" :width="editDialogWidth" :edit-dialog-title="editDialogTitle" :label-width="labelWidth" :visible.sync="editDialogTitleVisible" :form-items="editDialogFormItems" @save-event="saveEvent" @update-form='updateForm'></cool-edit-dialog> -->
+    <el-dialog ref="editDialog" :title="editDialogTitle" :visible.sync="editDialogTitleVisible" width="480px" :close-on-click-modal="false" @close="backEvent">
+      <div style="border:1px solid #DCDFE6">
+        <cool-form-view ref="formItems" :form-items="editDialogFormItems" @update-form='updateForm' size="mini" :inline="true" label-width="150px"></cool-form-view>
+      </div>
+      <div slot="footer">
+        <cool-save-button save-btn-text="确 认" back-btn-text="返 回" @save-event="saveEvent" @back-event="backEvent"></cool-save-button>
+      </div>
+    </el-dialog>
+  </div>
+</body>

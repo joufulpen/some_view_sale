@@ -1,0 +1,384 @@
+{
+  "apiName": "sale",
+  "editDialogFormItems": {
+    "form": [{
+      "type": "input",
+      "value": "",
+      "label": "建筑名称",
+      "name": "buildingName",
+      "style": {
+        "width": "100%"
+      },
+      "inputStyle": "width:182px",
+      "rules": {
+        "required": true,
+        "message": "建筑名称不能为空",
+        "trigger": "change"
+      }
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "楼层",
+      "name": "floor",
+      "style": {
+        "width": "100%"
+      },
+      "inputStyle": "width:182px",
+      "rules": {
+        "required": true,
+        "message": "楼层不能为空",
+        "trigger": "change"
+      }
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "房间号",
+      "name": "roomNo",
+      "style": {
+        "width": "100%"
+      },
+      "inputStyle": "width:182px",
+      "rules": {
+        "required": true,
+        "message": "房间号不能为空",
+        "trigger": "change"
+      }
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "窗号",
+      "name": "windowNo",
+      "style": {
+        "width": "100%"
+      },
+      "inputStyle": "width:182px",
+      "rules": {
+        "required": true,
+        "message": "窗号不能为空",
+        "trigger": "change"
+      }
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "窗型号",
+      "name": "windowTypeNo",
+      "style": {
+        "width": "100%"
+      },
+      "inputStyle": "width:182px",
+      "rules": {
+        "required": true,
+        "message": "窗型号不能为空",
+        "trigger": "change"
+      }
+    }, {
+      "type": "select",
+      "value": "",
+      "label": "窗类型",
+      "name": "windowType",
+      "style": {
+        "width": "100%"
+      },
+      "inputStyle": "width:182px",
+      "rules": {
+        "required": true,
+        "message": "窗类型不能为空",
+        "trigger": "change"
+      }
+    }, {
+      "type": "select",
+      "value": "",
+      "label": "分体号",
+      "name": "splitNo",
+      "inputStyle": "width:182px",
+      "style": {
+        "width": "100%"
+      }
+    }, {
+      "type": "date",
+      "value": "",
+      "label": "要求到货日期",
+      "name": "reqDeliveryDate",
+      "inputStyle": {
+        "width": "182px"
+      },
+      "style": {
+        "width": "100%"
+      }
+    }, {
+      "type": "inputNumber",
+      "value": "",
+      "label": "数量",
+      "name": "qty",
+      "min": 0,
+      "precision": 2,
+      "inputStyle": {
+        "width": "182px"
+      },
+      "style": {
+        "width": "100%"
+      }
+    }]
+  },
+  "orderMessageFormItems": [{
+    "title": "项目基本信息",
+    "formItems": {
+      "form": [{
+        "type": "input",
+        "value": "",
+        "label": "项目名称",
+        "name": "projectName",
+        "disabled": true,
+        "style": "",
+        "inputStyle": "width:182px",
+        "rules": {
+          "required": true,
+          "message": "项目名称不能为空",
+          "trigger": "change"
+        }
+      }, {
+        "type": "input",
+        "options": [],
+        "value": "",
+        "label": "项目类型",
+        "name": "type",
+        "disabled": true,
+        "style": "",
+        "inputStyle": "width:182px",
+        "rules": {
+          "required": true,
+          "message": "项目类型不能为空",
+          "trigger": "change"
+        }
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "工程代号",
+        "name": "engCode",
+        "disabled": true,
+        "style": "",
+        "inputStyle": "width:182px",
+        "rules": {
+          "required": true,
+          "message": "工程代号不能为空",
+          "trigger": "change"
+        }
+      }, {
+        "type": "input",
+        "options": [],
+        "value": "",
+        "label": "项目城市",
+        "name": "city",
+        "disabled": true,
+        "style": "",
+        "inputStyle": "width:182px",
+        "rules": {
+          "required": true,
+          "message": "项目城市不能为空",
+          "trigger": "change"
+        }
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "项目地址",
+        "name": "address",
+        "disabled": true,
+        "style": {
+          "width": "100%"
+        },
+        "inputStyle": "width:515px",
+        "rules": {
+          "required": true,
+          "message": "项目地址不能为空",
+          "trigger": "change"
+        }
+      }, {
+        "type": "textarea",
+        "value": "",
+        "label": "项目备注",
+        "name": "description",
+        "disabled": true,
+        "style": {
+          "width": "100%"
+        },
+        "inputStyle": "width:515px"
+      }]
+    }
+  }, {
+    "title": "客户基本信息",
+    "formItems": {
+      "form": [{
+        "type": "input",
+        "options": [],
+        "value": "",
+        "label": "客户名称",
+        "name": "customerName",
+        "disabled": true,
+        "style": "",
+        "inputStyle": "width:182px",
+        "rules": {
+          "required": true,
+          "message": "客户名称不能为空",
+          "trigger": "change"
+        }
+      }, {
+        "type": "input",
+        "options": [],
+        "value": "",
+        "label": "客户联系人",
+        "name": "customerContactName",
+        "disabled": true,
+        "inputStyle": "width:182px",
+        "style": ""
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "客户邮箱",
+        "name": "customerEmail",
+        "disabled": true,
+        "inputStyle": "width:182px",
+        "style": ""
+      }, {
+        "type": "input",
+        "options": [],
+        "value": "",
+        "label": "客户电话",
+        "name": "customerPhone",
+        "disabled": true,
+        "inputStyle": "width:182px",
+        "style": ""
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "客户地址",
+        "name": "customerAddress",
+        "disabled": true,
+        "style": {
+          "width": "100%"
+        },
+        "inputStyle": "width:515px"
+      }, {
+        "type": "textarea",
+        "value": "",
+        "label": "客户备注",
+        "name": "customerRemark",
+        "disabled": true,
+        "style": {
+          "width": "100%"
+        },
+        "inputStyle": "width:515px"
+      }]
+    }
+  }],
+  "orderFormItems": [{
+    "title": "订单基本信息",
+    "formItems": {
+      "form": [{
+        "type": "input",
+        "value": "",
+        "label": "订单编号",
+        "name": "formno",
+        "style": "",
+        "inputStyle": "width:182px",
+        "disabled": true
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "客户订单编号",
+        "name": "customerOrderNo",
+        "style": "",
+        "inputStyle": "width:182px",
+        "rules": {
+          "required": true,
+          "message": "客户订单不能为空",
+          "trigger": "change"
+        }
+      }, {
+        "type": "select",
+        "options": [],
+        "value": "",
+        "label": "订单类型",
+        "name": "type",
+        "style": "",
+        "inputStyle": "width:182px",
+        "rules": {
+          "required": true,
+          "message": "订单类型不能为空",
+          "trigger": "change"
+        }
+      }, {
+        "type": "select",
+        "options": [],
+        "value": "",
+        "label": "业务跟进人",
+        "name": "businessFollower",
+        "inputStyle": "width:182px",
+        "style": ""
+      }, {
+        "type": "textarea",
+        "value": "",
+        "label": "订单备注",
+        "name": "description",
+        "style": {
+          "width": "100%"
+        },
+        "inputStyle": {
+          "width": "515px"
+        }
+      }]
+    }
+  }, {
+    "title": "订单日期信息",
+    "formItems": {
+      "form": [{
+        "type": "date",
+        "value": "",
+        "label": "预计到现场日期",
+        "name": "arrivalDate",
+        "inputStyle": {
+          "width": "182px"
+        },
+        "style": ""
+      }, {
+        "type": "select",
+        "options": [],
+        "value": "",
+        "label": "船期选择",
+        "name": "shipTimeCode",
+        "inputStyle": "width:182px",
+        "style": ""
+      }, {
+        "type": "date",
+        "value": "",
+        "label": "预计发货日期",
+        "name": "deliveryDate",
+        "inputStyle": {
+          "width": "182px"
+        },
+        "style": ""
+      }, {
+        "type": "date",
+        "value": "",
+        "label": "客户要求到现场日期",
+        "name": "requestDate",
+        "inputStyle": {
+          "width": "182px"
+        },
+        "style": ""
+      }]
+    }
+  }, {
+    "title": "订单其他信息",
+    "formItems": {
+      "form": [{
+        "type": "select",
+        "options": [],
+        "value": "",
+        "label": "异常情况标记",
+        "name": "abnormalMarkCode",
+        "inputStyle": "width:182px",
+        "style": ""
+      }]
+    }
+  }]
+}

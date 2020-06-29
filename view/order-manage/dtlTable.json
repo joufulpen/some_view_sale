@@ -1,0 +1,306 @@
+{
+  "dtlTableData": [{
+    "label": "产品明细",
+    "name": "first",
+    "data": [],
+    "cellRow": {
+      "height": "30px",
+      "padding": "5px 0"
+    },
+    "columns": [{
+        "label": "序号",
+        "type": "index",
+        "fixed": "fixed"
+      }, {
+        "prop": "buildingName",
+        "label": "建筑名称"
+      },
+      {
+        "prop": "floor",
+        "label": "楼层"
+      },
+      {
+        "prop": "roomNo",
+        "label": "房间号"
+      },
+      {
+        "prop": "windowNo",
+        "label": "窗号"
+      },
+      {
+        "prop": "windowTypeNo",
+        "label": "窗型号"
+      },
+      {
+        "prop": "windowType",
+        "label": "窗类型"
+      },
+      {
+        "prop": "splitNo",
+        "label": "分体号"
+      },
+      {
+        "prop": "qty",
+        "label": "数量"
+      },
+      {
+        "prop": "reqDeliveryDate",
+        "label": "要求到货日期",
+        "dateFormatter": true
+      },
+      {
+        "prop": "reqApprovalDate",
+        "label": "要求核准日期",
+        "dateFormatter": true
+      },
+      {
+        "prop": "actualArrivalDate",
+        "label": "实际到货日期",
+        "dateFormatter": true
+      },
+      {
+        "prop": "actualApprovalDate",
+        "label": "实际核准日期",
+        "dateFormatter": true
+      }
+    ]
+  }, {
+    "label": "历史状态",
+    "name": "second",
+    "data": [],
+    "cellRow": {
+      "height": "30px",
+      "padding": "5px 0"
+    },
+    "columns": [{
+        "prop": "status",
+        "label": "改变前状态",
+        "showOverflowTooltip": true
+      },
+      {
+        "prop": "newStatus",
+        "label": "改变后状态",
+        "showOverflowTooltip": true
+      }, {
+        "prop": "updateDate",
+        "label": "改变日期",
+        "showOverflowTooltip": true,
+        "dateFormatter": true
+      }, {
+        "prop": "createName",
+        "label": "操作人",
+        "showOverflowTooltip": true
+      }, {
+        "prop": "description",
+        "label": "备注",
+        "showOverflowTooltip": true
+      }
+    ]
+  }, {
+    "label": "订单收款",
+    "name": "third",
+    "buttons": [{
+      "text": "新建",
+      "size": "mini",
+      "icon": "#iconxinzeng",
+      "disabled": true
+    }, {
+      "text": "编辑",
+      "size": "mini",
+      "icon": "#iconERP_bianji",
+      "disabled": true
+    }, {
+      "text": "删除",
+      "size": "mini",
+      "icon": "#iconERP_shanchu",
+      "disabled": true
+    }],
+    "data": [],
+    "cellRow": {
+      "height": "30px",
+      "padding": "5px 0"
+    },
+    "columns": [{
+        "type": "selection"
+      }, {
+        "label": "序号",
+        "type": "index",
+        "fixed": "fixed"
+      },
+      {
+        "prop": "code",
+        "label": "订单编号",
+        "width": "160",
+        "fixed": "fixed"
+      },
+      {
+        "prop": "receiptNumber",
+        "label": "收款账单编号"
+      },
+      {
+        "prop": "receiptAccount",
+        "label": "收款账号名称"
+      },
+      {
+        "prop": "amount",
+        "label": "收款金额"
+      },
+      {
+        "prop": "receiptor",
+        "label": "确认收款人"
+      },
+      {
+        "prop": "receiptDate",
+        "label": "收款时间",
+        "dateFormatter": true
+      },
+      {
+        "prop": "receiptType",
+        "label": "收款类型"
+      },
+      {
+        "prop": "receiptVoucher",
+        "label": "收款凭证"
+      },
+      {
+        "prop": "payBank",
+        "label": "支付银行"
+      },
+      {
+        "prop": "payAccount",
+        "label": "支付账号"
+      },
+      {
+        "prop": "createName",
+        "label": "创建人"
+      },
+      {
+        "prop": "createDate",
+        "label": "创建时间 ",
+        "dateFormatter": true
+      }
+    ]
+  }, {
+    "label": "附件",
+    "name": "fourth",
+    "buttons": [{
+      "text": "上传附件",
+      "size": "mini",
+      "icon": "#iconxinzeng",
+      "disabled": true
+    }, {
+      "text": "下载",
+      "size": "mini",
+      "icon": "#iconxiazai",
+      "disabled": true
+    }, {
+      "text": "删除",
+      "size": "mini",
+      "icon": "#iconERP_shanchu",
+      "disabled": true
+    }],
+    "data": [],
+    "cellRow": {
+      "height": "30px",
+      "padding": "5px 0"
+    },
+    "columns": [{
+        "type": "selection"
+      }, {
+        "prop": "name",
+        "label": "附件名称"
+      },
+      {
+        "prop": "updateDate",
+        "label": "上传日期",
+        "dateFormatter": true
+      },
+      {
+        "prop": "createName",
+        "label": "操作人"
+      }
+    ]
+  }, {
+    "label": "木箱清单",
+    "name": "fifth",
+    "buttons": [{
+      "text": "打印",
+      "size": "mini",
+      "icon": "#icondayin",
+      "disabled": true
+    }],
+    "data": [],
+    "cellRow": {
+      "height": "30px",
+      "padding": "5px 0"
+    },
+    "columns": [{
+      "type": "selection"
+    }, {
+      "label": "木箱编号",
+      "prop": "containerCode"
+    }, {
+      "label": "长",
+      "prop": "length"
+    }, {
+      "label": "宽",
+      "prop": "width"
+    }, {
+      "label": "高",
+      "prop": "height"
+    }, {
+      "label": "重量(kg)",
+      "prop": "weigth"
+    }, {
+      "label": "状态",
+      "prop": "status"
+    }, {
+      "label": "仓库",
+      "prop": "storeId"
+    }]
+  }, {
+    "label": "客户沟通信息",
+    "name": "sixth",
+    "buttons": [{
+      "text": "新建",
+      "size": "mini",
+      "icon": "#iconxinzeng",
+      "disabled": true
+    },{
+      "text": "编辑",
+      "size": "mini",
+      "icon": "#iconERP_bianji",
+      "disabled": true
+    },{
+      "text": "删除",
+      "size": "mini",
+      "icon": "#iconERP_shanchu",
+      "disabled": true
+    }],
+    "data": [],
+    "cellRow": {
+      "height": "30px",
+      "padding": "5px 0"
+    },
+    "columns": [{
+      "type": "selection"
+    }, {
+      "label": "客户交代（英文）",
+      "prop": "account"
+    }, {
+      "label": "中文翻译",
+      "prop": "translate"
+    }, {
+      "label": "状态",
+      "prop": "status"
+    }, {
+      "label": "提出时间",
+      "prop": "proposeDate",
+      "dateFormatter": true
+    }, {
+      "label": "完成时间",
+      "prop": "completeDate",
+      "dateFormatter": true
+    }]
+  }]
+}

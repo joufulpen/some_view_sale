@@ -1,0 +1,241 @@
+{
+  "apiName": "sale",
+  "orderFormItems": [{
+    "title": "报价信息",
+    "formItems": {
+      "form": [{
+        "type": "input",
+        "value": "",
+        "label": "报价单号",
+        "name": "priceCode",
+        "style": "",
+        "rules": {
+          "required": true,
+          "disabled": false,
+          "message": "报价单号不能为空",
+          "trigger": "change"
+        }
+      }, {
+        "type": "switch",
+        "activeText": "已审核",
+        "inactiveText": "未审核",
+        "value": "false",
+        "label": "报价单状态",
+        "name": "audit",
+        "disabled": true,
+        "readonly": true,
+        "style": "width:282px"
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "项目名称",
+        "disabled": false,
+        "readonly": true,
+        "name": "projectName",
+        "style": ""
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "工程代号",
+        "readonly": true,
+        "disabled": false,
+        "name": "engCode",
+        "style": ""
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "订单编号",
+        "readonly": true,
+        "disabled": false,
+        "name": "code",
+        "style": ""
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "订单名称",
+        "readonly": true,
+        "disabled": false,
+        "name": "orderName",
+        "style": ""
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "客户订单编号",
+        "disabled": false,
+        "readonly": true,
+        "name": "customerOrderNo",
+        "style": ""
+      }]
+    }
+  }, {
+    "title": "客户信息",
+    "formItems": {
+      "form": [{
+        "type": "input",
+        "value": "",
+        "label": "客户名称",
+        "disabled": false,
+        "readonly": true,
+        "name": "customerName",
+        "style": ""
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "客户地址",
+        "disabled": false,
+        "readonly": true,
+        "name": "customerAddress",
+        "style": ""
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "联系人员",
+        "disabled": false,
+        "readonly": true,
+        "name": "customerContactName",
+        "style": ""
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "联系电话",
+        "readonly": true,
+        "disabled": false,
+        "name": "customerPhone",
+        "style": ""
+      }, {
+        "type": "input",
+        "options": [],
+        "value": "",
+        "label": "客户邮箱",
+        "readonly": true,
+        "disabled": false,
+        "name": "customerEmail",
+        "style": ""
+      }]
+    }
+  }, {
+    "title": "订单报价",
+    "formItems": {
+      "form": [{
+        "type": "input",
+        "value": "",
+        "label": "订单报价",
+        "disabled": false,
+        "name": "justShowPrice",
+        "readonly": true,
+        "style": ""
+      }, {
+        "type": "inputNumber",
+        "min": 0,
+        "inputStyle": {
+          "width": "178px"
+        },
+        "value": "",
+        "label": "最终价格",
+        "disabled": false,
+        "name": "amount",
+        "style": ""
+      }, {
+        "type": "input",
+        "value": "",
+        "label": "备注",
+        "disabled": false,
+        "name": "description",
+        "style": ""
+      }]
+    }
+  }],
+  "coolFormItems": {
+    "form": [{
+      "type": "inputNumber",
+      "min": 0,
+      "inputStyle": {
+        "width": "178px"
+      },
+      "value": "",
+      "label": "单价",
+      "disabled": false,
+      "name": "price",
+      "style": {
+        "margin-bottom": "0px"
+      }
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "备注",
+      "disabled": false,
+      "name": "description",
+      "style": {
+        "margin-right": "10px",
+        "margin-bottom": "0px"
+      }
+    }],
+    "additionButtons": {
+      "style": "",
+      "buttons": [{
+        "text": "确 定",
+        "size": "mini",
+        "type": "success",
+        "disabled": true,
+        "key": "submit"
+      }]
+    }
+  },
+  "quickCoolFormItems": {
+    "form": [{
+      "type": "input",
+      "value": "",
+      "label": "建筑名称",
+      "disabled": true,
+      "readonly": true,
+      "name": "buildingName",
+      "style": "width:100%",
+      "inputStyle": "width: 193px"
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "楼层",
+      "disabled": true,
+      "readonly": true,
+      "name": "floor",
+      "style": "width:100%",
+      "inputStyle": "width: 193px"
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "数量",
+      "disabled": true,
+      "readonly": true,
+      "name": "qty",
+      "style": "width:100%",
+      "inputStyle": "width: 193px"
+    }, {
+      "type": "inputNumber",
+      "value": "",
+      "label": "单价",
+      "disabled": false,
+      "readonly": false,
+      "name": "price",
+      "style": "width:100%",
+      "inputStyle": "width: 193px"
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "金额",
+      "disabled": true,
+      "readonly": true,
+      "name": "amount",
+      "style": "width:100%",
+      "inputStyle": "width: 193px"
+    }, {
+      "type": "input",
+      "value": "description",
+      "label": "备注",
+      "disabled": false,
+      "readonly": false,
+      "name": "description",
+      "style": "width:100%",
+      "inputStyle": "width: 193px"
+    }]
+  }
+}

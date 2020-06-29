@@ -1,0 +1,283 @@
+{
+  "apiName": "sale",
+  "formItems": {
+    "form": [{
+      "type": "input",
+      "value": "",
+      "label": "发货单编号",
+      "name": "formno",
+      "style": "",
+      "inputStyle": {
+        "width": "182px"
+      },
+      "rules": {
+        "required": true,
+        "message": "此项不能为空",
+        "trigger": "blur"
+      },
+      "disabled": false
+    }, {
+      "type": "select",
+      "filterable": true,
+      "remote": true,
+      "value": "",
+      "label": "订单选择",
+      "name": "pformno",
+      "options": [],
+      "loading": false,
+      "style": "",
+      "inputStyle": "width:182px",
+      "rules": {
+        "required": true,
+        "message": "此项不能为空",
+        "trigger": "change"
+      },
+      "disabled": false
+    }, {
+      "type": "select",
+      "value": "",
+      "label": "发货类型",
+      "name": "type",
+      "loading": false,
+      "options": [],
+      "style": "",
+      "inputStyle": {
+        "width": "182px"
+      },
+      "disabled": false,
+      "rules": {
+        "required": true,
+        "message": "此项不能为空",
+        "trigger": "change"
+      }
+    }, {
+      "type": "date",
+      "value": "",
+      "label": "发货日期",
+      "name": "deliveryTime",
+      "style": "",
+      "inputStyle": {
+        "width": "182px"
+      },
+      "rules": {
+        "required": true,
+        "message": "此项不能为空",
+        "trigger": "blur"
+      },
+      "disabled": false
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "客户",
+      "name": "customerName",
+      "readonly": true,
+      "style": "",
+      "inputStyle": {
+        "width": "182px"
+      },
+      "disabled": false
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "联系人",
+      "name": "customerContactName",
+      "readonly": true,
+      "style": "",
+      "inputStyle": {
+        "width": "182px"
+      },
+      "disabled": false
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "联系电话",
+      "name": "customerPhone",
+      "readonly": true,
+      "style": "",
+      "inputStyle": {
+        "width": "182px"
+      },
+      "disabled": false
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "送货地址",
+      "name": "address",
+      "style": {
+        "width": "100%"
+      },
+      "inputStyle": {
+        "width": "475px"
+      },
+      "disabled": false
+    }, {
+      "type": "select",
+      "value": "",
+      "label": "跟进人",
+      "loading": false,
+      "filterable": true,
+      "name": "businessFollower",
+      "options": [],
+      "clearable": true,
+      "inputStyle": "width:182px",
+      "style": ""
+    }, {
+      "type": "select",
+      "options": [],
+      "value": "",
+      "label": "发货单位",
+      "loading": false,
+      "name": "deliveryUnitName",
+      "style": "",
+      "inputStyle": "width:182px",
+      "disabled": false
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "发货人电话",
+      "name": "deliveryUnitPhone",
+      "readonly": true,
+      "style": "",
+      "inputStyle": {
+        "width": "182px"
+      },
+      "disabled": false
+    }, {
+      "type": "select",
+      "options": [],
+      "value": "",
+      "label": "物流公司",
+      "name": "logisticsCompany",
+      "loading": false,
+      "style": "",
+      "inputStyle": "width:182px",
+      "rules": {
+        "required": true,
+        "message": "此项不能为空",
+        "trigger": "change"
+      },
+      "disabled": false
+    }, {
+      "type": "select",
+      "options": [],
+      "value": "",
+      "label": "物流方式",
+      "loading": false,
+      "name": "logisticsType",
+      "style": "",
+      "inputStyle": "width:182px",
+      "rules": {
+        "required": true,
+        "message": "此项不能为空",
+        "trigger": "change"
+      },
+      "disabled": false
+    }, {
+      "type": "inputNumber",
+      "value": "",
+      "label": "物流费用",
+      "name": "logisticsMoney",
+      "min": 0,
+      "precision": 2,
+      "style": "",
+      "inputStyle": {
+        "width": "182px"
+      },
+      "disabled": false
+    }, {
+      "type": "select",
+      "options": [],
+      "value": "",
+      "label": "航线",
+      "loading": false,
+      "name": "route",
+      "style": "",
+      "inputStyle": "width:182px",
+      "disabled": false
+    }, {
+      "type": "select",
+      "options": [],
+      "value": "",
+      "label": "出关口岸",
+      "loading": false,
+      "name": "exitPort",
+      "style": "",
+      "inputStyle": "width:182px",
+      "disabled": false
+    }, {
+      "type": "select",
+      "options": [],
+      "value": "",
+      "label": "到港口岸",
+      "loading": false,
+      "name": "arrivalPort",
+      "style": "",
+      "inputStyle": "width:182px",
+      "disabled": false
+    }, {
+      "type": "textarea",
+      "options": [],
+      "value": "",
+      "label": "备注",
+      "name": "description",
+      "resize": "none",
+      "style": {
+        "width": "100%"
+      },
+      "inputStyle": {
+        "width": "475px"
+      },
+      "disabled": false
+    }]
+  },
+  "containerForm": {
+    "form": [{
+      "type": "input",
+      "value": "",
+      "label": "货柜号",
+      "name": "containerCode",
+      "style": "",
+      "rules": {
+        "required": true,
+        "message": "此项不能为空",
+        "trigger": "blur"
+      },
+      "disabled": false
+    }, {
+      "type": "select",
+      "options": [],
+      "value": "",
+      "label": "货柜类型",
+      "name": "type",
+      "style": "",
+      "inputStyle": "width: 182px",
+      "rules": {
+        "required": true,
+        "message": "此项不能为空",
+        "trigger": "change"
+      },
+      "disabled": false
+    }, {
+      "type": "input",
+      "value": "",
+      "label": "过磅重量",
+      "name": "weight",
+      "style": "",
+      "disabled": false
+    }, {
+      "type": "textarea",
+      "options": [],
+      "value": "",
+      "label": "备注",
+      "name": "description",
+      "resize": "none",
+      "style": {
+        "width": "100%"
+      },
+      "inputStyle": {
+        "width": "485px"
+      },
+      "disabled": false
+    }]
+  }
+}

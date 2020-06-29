@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8" />
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <title>项目管理</title>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+  </style>
+  <script>
+    window.coolLocals = {}
+    window.extraJsons = ['dtlTable.json']
+  </script>
+  <!-- <script src="../../cool-master/cool-master.js"></script> -->
+  <script src="/settings.js"></script>
+
+</head>
+<!-- #DCDFE6 -->
+
+<body>
+  <div id="root" v-cloak>
+    <!-- <cool-views:buttons="buttons" @button-click="buttonsevent" :show-query="showQuery" :origin-condition="originCondition" @get-condition="getCondition" :hdr-table-data="hdrTableData" :dlt-table-data="dltTableData" @hdr-row-click="handleRowClick"
+      @hdr-pagination-size-change="handleSizeChange" @hdr-pagination-current-change="handlePageChange" @dlt-select-change="uploadedSelect" :dialogs="dialogs" @save-event="dialogSaveEvent" @back-event="dialogBackEvent" @dlt-button-click="dltButtonClick">
+      <template slot="footerTableSlot">
+        <cool-button-group :buttons="uploadBtns" @button-click="uploadBtnsEvent"></cool-button-group>
+      </template>
+    </cool-views> -->
+    <!-- 上传组件 -->
+    <cool-upload v-if="uploadDialogVisible" :visible.sync="uploadDialogVisible" :parent-id="parentId" :parent-type="parentType" @upload-success="uploadSuccess"></cool-upload>
+
+    <cool-master-view ref="masterView" :unique-deploy-key="uniqueDeployKey" :axios-setting="axiosSetting" :dialogs="dialogs" :is-methods="isMethods" @table-row-click="tableRowClick" @table-select-change="tableSelectionChange" @pagination-size-change="paginationSizeChange"
+      @pagination-current-change="paginationCurrentChange" @get-condition="getCondition" @newproject-btn="handleNewProejctBtn" @edit-btn="handleEditBtn" @print-btn="handlePrintBtn" @export-btn="handleExportBtn" @neworder-btn="handleNewOrderBtn"
+      @save-event="dialogSaveEvent" @back-event="dialogBackEvent" @dlt-button-click="dltButtonsEvent" @dlt-select-change="dltTableSelectionChange" @tab-click="tabClick"></cool-master-view>
+  </div>
+</body>

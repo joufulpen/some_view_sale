@@ -1,0 +1,42 @@
+{
+  "buttons": [{
+      "text": "查找",
+      "size": "mini",
+      "icon": "el-icon-search"
+    },
+    {
+      "text": "新增项目",
+      "size": "mini",
+      "icon": "el-icon-plus"
+    },
+    {
+      "text": "编辑",
+      "size": "mini",
+      "icon": "el-icon-edit",
+      "disabled": true
+    },
+    {
+      "text": "删除",
+      "size": "mini",
+      "icon": "el-icon-delete",
+      "disabled": true
+    },
+    {
+      "text": "打印",
+      "size": "mini",
+      "icon": "el-icon-document",
+      "disabled": true
+    },
+    {
+      "text": "导出",
+      "size": "mini",
+      "icon": "el-icon-message"
+    },
+    {
+      "text": "新增订单",
+      "size": "mini",
+      "icon": "el-icon-more",
+      "disabled":true
+    }
+  ]
+}

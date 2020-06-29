@@ -1,0 +1,48 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8" />
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <title>报价单</title>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+
+    #root .cool-form {
+      padding-top: 2px !important;
+    }
+
+    .cool-form .el-form-item {
+      margin-bottom: 2px
+    }
+  </style>
+  <script>
+    window.coolLocals = {}
+  </script>
+  <!-- <script src="../../cool-master/cool-master.js"></script> -->
+  <script src="/settings.js"></script>
+</head>
+<style>
+</style>
+
+<body>
+  <div id="root" v-cloak>
+    <el-container>
+      <el-header height="auto">
+        <cool-button-group :buttons="buttons" @button-click="buttonEvent"></cool-button-group>
+      </el-header>
+      <el-main>
+        <div v-for="item in orderFormItems" :key="item.index">
+          <span style="font-size:16px;vertical-align: middle;font-weight:bold">{{item.title}}</span>
+          <cool-form-view class="cool-form" ref="coolForm" :form-items="item.formItems" :inline="true" :label-width="labelWidth" @update-form="masterUpdateForm"></cool-form-view>
+        </div>
+        <!-- <cool-form-view style="border-top: 1px solid #DCDFE6" ref="coolFormView" :form-items="coolFormItems" :inline="true" :label-width="coolLabelWidth" @update-form="assistantUpdateForm" @button-click="submit" @keyup-enter="keyupEnter"></cool-form-view> -->
+        <el-button size="mini" @click="editDataBtn" :disabled="selectedData.length!==1">数据编辑</el-button>
+        <cool-table-view ref="dataTable" :data="productInfoData" :highlight-current-row="highlightCurrentRow" :columns="productInfoColumns" :cell-style="cellRow" @table-row-click="rowClick" @table-selection-change="selection" @table-row-dblclick="rowDblClick"></cool-table-view>
+      </el-main>
+      <cool-quick-edit ref="quickEdit" :visible.sync="quickDialogVisible" :form-items="quickCoolFormItems" :width="dialogWidth" :label-width="labelWidth" :all-data="productInfoData" :current-edit-data="currentEditData" @quick-save-event="quickSaveEvent"></cool-quick-edit>
+    </el-container>
+  </div>
+</body>

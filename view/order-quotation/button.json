@@ -1,0 +1,23 @@
+{
+  "buttons": [{
+    "text": "保存",
+    "size": "medium",
+    "type": "success",
+    "disabled":false
+  }, {
+    "text": "返回",
+    "size": "medium",
+    "type": "info",
+    "disabled":false
+  },{
+    "text": "审核",
+    "size": "medium",
+    "type": "warning",
+    "disabled":false
+  }, {
+    "text": "打印",
+    "size": "medium",
+    "type": "primary",
+    "disabled":true
+  }]
+}

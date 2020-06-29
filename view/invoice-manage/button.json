@@ -1,0 +1,39 @@
+{
+  "deliveryTableBtn": [{
+    "text": "新增",
+    "size": "mini",
+    "icon": "#iconxinzeng",
+    "disabled": false
+  }, {
+    "text": "编辑",
+    "size": "mini",
+    "icon": "#iconERP_bianji",
+    "disabled": true
+  }, {
+    "text": "删除",
+    "size": "mini",
+    "icon": "#iconERP_shanchu",
+    "disabled": true
+  }, {
+    "text": "添加订单木箱",
+    "size": "mini",
+    "icon": "#iconbaozhuang1",
+    "disabled": true
+  }],
+  "packingBoxButtons":[{
+    "text": "查询",
+    "size": "mini",
+    "icon": "#iconchaxun",
+    "disabled": true
+  }, {
+    "text": "确认",
+    "size": "mini",
+    "icon": "#iconqueren",
+    "disabled": true
+  }, {
+    "text": "关闭",
+    "size": "mini",
+    "icon": "#icontuihui",
+    "disabled": true
+  }]
+}

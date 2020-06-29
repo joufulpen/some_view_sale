@@ -1,0 +1,117 @@
+{
+  "dtlTableData": [{
+    "data": [],
+    "label": "客户沟通信息",
+    "name": "first",
+    "cellStyle": {
+      "height": "30px",
+      "padding": "3px 0"
+    },
+    "columns": [{
+        "type": "index",
+        "label": "序号",
+        "width": "55px"
+      }, {
+        "prop": "outstandingItems",
+        "label": "客户交代（英文）"
+      },
+      {
+        "prop": "translation",
+        "label": "中文翻译"
+      },
+      {
+        "prop": "status",
+        "label": "状态"
+      },
+      {
+        "prop": "updDate",
+        "label": "提出时间",
+        "dateFormatter": true
+      },
+      {
+        "prop": "endDate",
+        "label": "完成时间",
+        "dateFormatter": true
+      }
+    ],
+    "buttons": [{
+      "text": "导出",
+      "size": "mini",
+      "icon": "#icondaochuwenjian",
+      "disabled": true,
+      "key": "import"
+    }]
+  }, {
+    "data": [],
+    "label": "历史状态",
+    "name": "second",
+    "cellStyle": {
+      "height": "30px",
+      "padding": "3px 0"
+    },
+    "columns": [{
+      "prop": "status",
+      "label": "改变前状态",
+      "showOverflowTooltip": true
+    }, {
+      "prop": "newStatus",
+      "label": "改变后状态",
+      "showOverflowTooltip": true
+    }, {
+      "prop": "updateDate",
+      "label": "改变日期",
+      "showOverflowTooltip": true,
+      "dateFormatter": true
+    }, {
+      "prop": "createName",
+      "label": "操作人",
+      "showOverflowTooltip": true
+    }, {
+      "prop": "description",
+      "label": "备注",
+      "showOverflowTooltip": true
+    }]
+  }, {
+    "label": "附件",
+    "data": [],
+    "footerTableSlot": "footerTableSlot",
+    "showFooterTableSlot": true,
+    "name": "third",
+    "cellStyle": {
+      "height": "30px",
+      "padding": "5px 0"
+    },
+    "columns": [{
+        "type": "selection"
+      }, {
+        "prop": "name",
+        "label": "附件名称"
+      },
+      {
+        "prop": "updateDate",
+        "label": "上传日期",
+        "dateFormatter": true
+      },
+      {
+        "prop": "createName",
+        "label": "操作人"
+      }
+    ],
+    "buttons": [{
+      "text": "新建",
+      "size": "mini",
+      "icon": "#iconxinzeng",
+      "disabled": true
+    }, {
+      "text": "下载",
+      "size": "mini",
+      "icon": "#iconxiazai",
+      "disabled": true
+    }, {
+      "text": "删除",
+      "size": "mini",
+      "icon": "#iconERP_shanchu",
+      "disabled": true
+    }]
+  }]
+}

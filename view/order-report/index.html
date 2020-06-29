@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8" />
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <title>订单报表</title>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+  </style>
+  <script>
+    window.coolLocals = {}
+  </script>
+  <!-- <script src="../../cool-master/cool-master.js"></script> -->
+  <script src="/settings.js"></script>
+
+</head>
+<!-- #DCDFE6 -->
+
+<body>
+  <div id="root" v-cloak>
+    <el-container>
+      <el-main>
+        <span style="font-size:18px;vertical-align: middle;font-weight:bold;padding-left:15px;">查询条件</span>
+        <div style=";display: flex;text-align:center;margin-top:10px" v-for="(item,index) in queryCondition" :key="index">
+          <div style="flex:0 0 auto;width:150px">{{item.name}}</div>
+          <div>
+            <el-date-picker style="font-size:10px" v-model="item.value[0]" type="date" :size="size" @change="(value)=>updateCondition(value,item.name)" v-if="item.form=='date'" value-format="yyyy-MM-dd"><br></el-date-picker>
+            ~
+            <el-date-picker style="font-size:10px" v-model="item.value[1]" type="date" :size="size" @change="(value)=>updateCondition(value,item.name)" v-if="item.form=='date'" value-format="yyyy-MM-dd"></el-date-picker>
+
+            <el-dropdown trigger="click" @command="handleCommand" placement="bottom-start" style="margin-left:10px">
+              <span class="el-dropdown-link" style="font-size:15px;">
+                {{item.mode}}
+              </span>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item v-for="(list,idx) in item.modeList" :key="idx" :command="{data:list,index:idx,mode:item}">
+                  {{list}}
+                </el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
+          </div>
+        </div>
+        <el-button style="margin-left:20px;margin-top:10px" @click="printData">查询</el-button>
+      </el-main>
+    </el-container>
+  </div>
+</body>

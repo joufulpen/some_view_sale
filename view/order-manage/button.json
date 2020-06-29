@@ -1,0 +1,158 @@
+{
+  "buttons": [{
+      "text": "查询",
+      "size": "mini",
+      "icon": "#iconchaxun",
+      "controlDisable": "",
+      "key": "query"
+    },
+    {
+      "text": "查看",
+      "size": "mini",
+      "icon": "#iconchakan",
+      "disabled": true,
+      "controlDisable": "single",
+      "key": "check-btn"
+    },
+    {
+      "text": "编辑",
+      "size": "mini",
+      "icon": "#iconERP_bianji",
+      "disabled": true,
+      "controlDisable": "",
+      "key": "edit-btn"
+    },
+    {
+      "text": "删除",
+      "size": "mini",
+      "icon": "#iconERP_shanchu",
+      "disabled": true,
+      "controlDisable": "",
+      "key": "delete"
+    },
+    {
+      "text": "打印",
+      "size": "mini",
+      "icon": "#icondayin",
+      "disabled": true,
+      "controlDisable": "",
+      "key": "print-btn"
+    },
+    {
+      "text": "流程控制",
+      "size": "mini",
+      "icon": "#iconshenheliucheng",
+      "disabled": true,
+      "controlDisable": "",
+      "key": "flowcontrol-btn"
+    },
+    {
+      "text": "报价单管理",
+      "size": "mini",
+      "icon": "#iconbaojiadan",
+      "disabled": true,
+      "controlDisable": "",
+      "key": "quotation-btn"
+    },
+    {
+      "text": "零部件",
+      "size": "mini",
+      "icon": "#iconbaozhuang1",
+      "disabled": true,
+      "controlDisable": "single",
+      "key": "part-btn"
+    },
+    {
+      "text": "铝材导入",
+      "size": "mini",
+      "icon": "#icondaoruwenjian",
+      "disabled": true,
+      "controlDisable": "single",
+      "key": "aluminum-btn"
+    },
+    {
+      "text": "配件导入",
+      "size": "mini",
+      "icon": "#icondaoruwenjian",
+      "disabled": true,
+      "controlDisable": "single",
+      "key": "accessory-btn"
+    },
+    {
+      "text": "定制部件导入",
+      "size": "mini",
+      "icon": "#icondaoruwenjian",
+      "disabled": true,
+      "controlDisable": "single",
+      "key": "custom-part-btn"
+    },
+    {
+      "text": "包装箱管理",
+      "size": "mini",
+      "icon": "#iconbaozhuang1",
+      "disabled": true,
+      "controlDisable": "single",
+      "key": "package-btn"
+    },
+    {
+      "text": "木箱管理",
+      "size": "mini",
+      "icon": "#iconbaozhuang1",
+      "disabled": true,
+      "controlDisable": "single",
+      "key": "woodencase-btn"
+    }
+  ],
+  "receiptButtons": [{
+      "text": "新建",
+      "size": "mini",
+      "icon": "#iconxinzeng",
+      "disabled": true
+    },
+    {
+      "text": "编辑",
+      "size": "mini",
+      "icon": "#iconERP_bianji",
+      "disabled": true
+    },
+    {
+      "text": "删除",
+      "size": "mini",
+      "icon": "#iconERP_shanchu",
+      "disabled": true
+    }
+  ],
+  "productInfoBtn": [{
+    "text": "导入产品",
+    "size": "mini",
+    "icon": "#icondaoruwenjian"
+  }, {
+    "text": "新增产品",
+    "size": "mini",
+    "icon": "#iconxinzeng"
+  }, {
+    "text": "编辑产品",
+    "size": "mini",
+    "icon": "#iconERP_bianji"
+  }, {
+    "text": "删除产品",
+    "size": "mini",
+    "icon": "#iconERP_shanchu"
+  }],
+  "uploadBtns": [{
+    "text": "新建",
+    "size": "mini",
+    "icon": "#iconxinzeng",
+    "disabled": true
+  }, {
+    "text": "下载",
+    "size": "mini",
+    "icon": "#iconxiazai",
+    "disabled": true
+  }, {
+    "text": "删除",
+    "size": "mini",
+    "icon": "#iconERP_shanchu",
+    "disabled": true
+  }]
+}

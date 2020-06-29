@@ -1,0 +1,53 @@
+{
+  "productInfoColumns": [{
+      "type": "selection"
+    },{
+      "type": "index",
+      "label": "序号",
+      "width": "58px"
+    }, {
+      "prop": "buildingName",
+      "label": "建筑名称"
+    },
+    {
+      "prop": "floor",
+      "label": "楼层"
+    },
+    {
+      "prop": "rootNo",
+      "label": "房间号"
+    },
+    {
+      "prop": "qty",
+      "label": "数量"
+    },
+    {
+      "prop": "price",
+      "label": "单价"
+    },
+    {
+      "prop": "amount",
+      "label": "金额"
+    },
+    {
+      "prop": "description",
+      "label": "备注"
+    },
+    {
+      "prop": "updateName",
+      "label": "填报人"
+    },
+    {
+      "prop": "updateDate",
+      "label": "填报时间"
+    },
+    {
+      "prop": "auditName",
+      "label": "审核人"
+    },
+    {
+      "prop": "auditDate",
+      "label": "审核时间"
+    }
+  ]
+}

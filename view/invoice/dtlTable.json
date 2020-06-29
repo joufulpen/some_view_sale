@@ -1,0 +1,36 @@
+{
+  "dtlTableData": [{
+    "highlightCurrentRow": true,
+    "label": "历史状态",
+    "name": "first",
+    "data": [],
+    "columns": [{
+        "prop": "status",
+        "label": "改变前状态",
+        "showOverflowTooltip": true
+      },
+      {
+        "prop": "newStatus",
+        "label": "改变后状态",
+        "showOverflowTooltip": true
+      }, {
+        "prop": "updateDate",
+        "label": "改变日期",
+        "showOverflowTooltip": true,
+        "dateFormatter": true
+      }, {
+        "prop": "createName",
+        "label": "操作人",
+        "showOverflowTooltip": true
+      }, {
+        "prop": "description",
+        "label": "备注",
+        "showOverflowTooltip": true
+      }
+    ],
+    "cellRow": {
+      "height": "30px",
+      "padding": "5px 0"
+    }
+  }]
+}

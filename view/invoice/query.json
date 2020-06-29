@@ -1,0 +1,107 @@
+{
+  "queryCondition": {
+    "formno": {
+      "value": "",
+      "mode": "相似",
+      "name": "发货单编号",
+      "dataType": "string",
+      "fieldName": "formno",
+      "tableRelationMode": "AND",
+      "form": "input",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "pformno": {
+      "value": "",
+      "mode": "相似",
+      "name": "内部订单编号",
+      "dataType": "string",
+      "fieldName": "pformno",
+      "tableRelationMode": "AND",
+      "form": "input",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "type": {
+      "value": "",
+      "mode": "相似",
+      "name": "发货类型",
+      "dataType": "string",
+      "fieldName": "type",
+      "tableRelationMode": "AND",
+      "form": "select",
+      "options": [],
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "customerName": {
+      "value": "",
+      "mode": "相似",
+      "name": "客户名称",
+      "dataType": "string",
+      "fieldName": "customerName",
+      "tableRelationMode": "AND",
+      "form": "input",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "logisticsCompany": {
+      "value": "",
+      "mode": "相似",
+      "name": "物流公司",
+      "dataType": "string",
+      "fieldName": "logisticsCompany",
+      "tableRelationMode": "AND",
+      "form": "select",
+      "options": [],
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "exitPort": {
+      "value": "",
+      "mode": "相似",
+      "name": "出关口岸",
+      "dataType": "string",
+      "fieldName": "exitPort",
+      "tableRelationMode": "AND",
+      "form": "select",
+      "options": [],
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "arrivalPort": {
+      "value": "",
+      "mode": "相似",
+      "name": "到港口岸",
+      "dataType": "string",
+      "fieldName": "arrivalPort",
+      "tableRelationMode": "AND",
+      "form": "select",
+      "options": [],
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "deliveryTime": {
+      "value": ["", ""],
+      "mode": "之间",
+      "name": "发货日期",
+      "dataType": "date",
+      "fieldName": "deliveryTime",
+      "tableRelationMode": "AND",
+      "form": "date",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    },
+    "createDate": {
+      "value": ["", ""],
+      "mode": "之间",
+      "name": "创建日期",
+      "dataType": "date",
+      "fieldName": "createDate",
+      "tableRelationMode": "AND",
+      "form": "date",
+      "modeList": [],
+      "tableName": "[Hdr]"
+    }
+  }
+}

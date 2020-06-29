@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>发货单管理</title>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+  </style>
+  <script>
+    window.coolLocals = {}
+    window.extraJsons = ['dtlTable.json']
+  </script>
+  <!-- <script src="/cool-master/cool-master.js"></script> -->
+  <script src="/settings.js"></script>
+</head>
+
+<style>
+
+</style>
+
+<body>
+  <div id="root" v-cloak>
+    <cool-master-view ref="masterView" :unique-deploy-key="uniqueDeployKey" :axios-setting="axiosSetting" :dialogs="dialogs" :is-methods="isMethods" @table-row-click="handleRowClick" @table-select-change="hdrSelect" @pagination-size-change="paginationSizeChange"
+      @pagination-current-change="paginationCurrentChange" @get-condition="getCondition" @check-btn="handleCheckBtn" @create-btn="handleCreateBtn" @edit-btn="handleEditBtn" @submit-btn="handleSubmitBtn" @return-btn="handleReturnBtn" @print-btn="handlePrintBtn"
+      @save-event="dialogSaveEvent" @back-event="dialogBackEvent"></cool-master-view>
+
+    <!-- <cool-views ref="coolViews" :buttons="buttons" @button-click="buttonsevent" :show-query="showQuery" :origin-condition="originCondition" @get-condition="getCondition" :hdr-table-data="hdrTableData" :dlt-table-data="dltTableData"
+      @hdr-pagination-size-change="paginationSizeChange" @hdr-pagination-current-change="paginationCurrentChange" @hdr-row-click="handleRowClick" @hdr-select="hdrSelect"></cool-views> -->
+
+    <!-- <cool-multi-dialog :dialogs="dialogs" @save-event="dialogSaveEvent" @back-event="dialogBackEvent"></cool-multi-dialog> -->
+
+    <el-dialog title="退回操作" :close-on-click-modal="false" :visible.sync="backVisible" width="350px" @close="clearDialogForm">
+      <cool-form-view ref="backItems" :form-items="backItems" size="mini" :inline="true" label-width="auto"></cool-form-view>
+      <div slot="footer">
+        <cool-save-button save-btn-text="提 交" back-btn-text="返 回" @save-event="handleBack" @back-event="backVisible=false"></cool-save-button>
+      </div>
+    </el-dialog>
+  </div>
+</body>
+
+</html>
